@@ -1,6 +1,6 @@
 <div align="center">
   <p>
-    <a href="https://tenpi.github.io/soundcloud.ts/"><img src="https://raw.githubusercontent.com/cloudr-app/opensoundcloud/master/images/opensoundcloud.svg" /></a>
+    <a href="https://github.com/cloudr-app/opensoundcloud"><img src="https://raw.githubusercontent.com/cloudr-app/opensoundcloud/master/assets/opensoundcloud.svg" /></a>
   </p>
 </div>
 
