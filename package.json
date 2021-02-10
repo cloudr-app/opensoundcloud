@@ -1,0 +1,91 @@
+{
+  "name": "opensoundcloud",
+  "version": "0.0.1",
+  "description": "A thin SoundCloud API, APIv2 and web-scrape wrapper written in TypeScript.",
+  "main": "lib/soundcloud.js",
+  "types": "lib/soundcloud.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "build": "rimraf lib && tsc",
+    "test": "echo \"no tests\"",
+    "commit": "cz -S",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloudr-app/opensoundcloud"
+  },
+  "keywords": [
+    "soundcloud",
+    "typescript",
+    "ts",
+    "audio",
+    "music"
+  ],
+  "author": "vaaski <admin@vaa.ski>",
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "commitizen": "^4.2.2",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^3.8.3"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2020
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/member-delimiter-style": [
+        "error",
+        {
+          "multiline": {
+            "delimiter": "none"
+          }
+        }
+      ],
+      "@typescript-eslint/no-explicit-any": [
+        "off"
+      ],
+      "@typescript-eslint/indent": [
+        "error",
+        2
+      ]
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
+  }
+}
