@@ -2,3 +2,5 @@
 node_modules
 lib
 demo_out.json
+.nyc_output
+coverage

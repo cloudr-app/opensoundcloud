@@ -15,7 +15,7 @@ const resolve = async (url: string): Promise<ScrapeResolve> => {
   const html = await ky(urlify(url)).text()
   const [match] = html.match(htmlDataReg) || []
   const parsed = JSON.parse(match)
-  const { data } = at(parsed, -1) || at(parsed, -2)
+  const { data } = at(parsed, -1) // || at(parsed, -2)
 
   return data[0] as ScrapeResolve
 }
