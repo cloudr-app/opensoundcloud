@@ -18,6 +18,12 @@
   </a>
 </p>
 
+<p align="center">
+  <a target="_blank" href="https://wakatime.com/badge/github/cloudr-app/opensoundcloud" alt="downloads">
+    <img src="https://wakatime.com/badge/github/cloudr-app/opensoundcloud.svg">
+  </a>
+</p>
+
 <div align="center">
   <h3>soon</h3>
 </div>

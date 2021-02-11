@@ -2,9 +2,10 @@
   "name": "opensoundcloud",
   "version": "0.0.4",
   "description": "A thin SoundCloud API, APIv2 and web-scrape wrapper written in TypeScript.",
-  "main": "lib/src/index.js",
+  "main": "lib/index.js",
   "files": [
-    "lib/**/*"
+    "lib/**/*",
+    ".npmrc"
   ],
   "engines": {
     "node": ">=12.0.0"
