@@ -1,4 +1,5 @@
 import resolve from "./resolve"
+import playlist from "./playlist"
 
-export default { resolve }
-export { resolve }
+export default { resolve, playlist }
+export { resolve, playlist }

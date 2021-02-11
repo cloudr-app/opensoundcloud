@@ -1,4 +1,3 @@
-// cspell:disable
 // generated using https://app.quicktype.io?share=31kt7pkt3K2AZvf7WbvW
 
 export type ResolvedKind = "playlist" | "user" | "track"
