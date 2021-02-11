@@ -11,7 +11,7 @@ const htmlDataReg = /(\[{"id")(.*?)(?=\);)/i
  * In browsers you have to use `resolve.browser` instead.
  * @param url
  */
-export const resolve = async (url: string): Promise<ScrapeResolve> => {
+const resolve = async (url: string): Promise<ScrapeResolve> => {
   const html = await ky(urlify(url)).text()
   const [match] = html.match(htmlDataReg) || []
   const parsed = JSON.parse(match)
@@ -34,3 +34,5 @@ resolve.browser = async (url: string, client_id: string): Promise<APIv1Resolve> 
 
   return data as APIv1Resolve
 }
+
+export default resolve

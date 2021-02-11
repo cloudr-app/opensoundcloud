@@ -14,10 +14,12 @@ const formatSize = (bytes: number, decimals = 2) => {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i]
 }
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const client_id = process.env.SOUNDCLOUD_CLIENT_ID_V1 || "client_id"
 const examplePlaylist = "https://soundcloud.com/vaaski/sets/rrrrrrrrr"
 const exampleUser = "https://soundcloud.com/vaaski"
 const exampleTrack = "https://soundcloud.com/vaaski/slow-night"
+/* eslint-enable @typescript-eslint/no-unused-vars */
 
 !(async () => {
   const startTime = Date.now()
