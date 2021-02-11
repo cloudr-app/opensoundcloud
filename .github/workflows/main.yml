@@ -16,7 +16,7 @@ jobs:
       - name: use node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "10.x"
+          node-version: "12.x"
 
       - name: cache node.js modules
         uses: actions/cache@v2
@@ -36,6 +36,12 @@ jobs:
           SOUNDCLOUD_CLIENT_ID_V1: ${{ secrets.SOUNDCLOUD_CLIENT_ID_V1 }}
           SOUNDCLOUD_CLIENT_ID_V2: ${{ secrets.SOUNDCLOUD_CLIENT_ID_V2 }}
           SOUNDCLOUD_OAUTH_TOKEN: ${{ secrets.SOUNDCLOUD_OAUTH_TOKEN }}
+          EXAMPLE_PLAYLIST_ID: ${{ secrets.EXAMPLE_PLAYLIST_ID }}
+          EXAMPLE_PLAYLIST_URL: ${{ secrets.EXAMPLE_PLAYLIST_URL }}
+          EXAMPLE_TRACK_ID: ${{ secrets.EXAMPLE_TRACK_ID }}
+          EXAMPLE_TRACK_URL: ${{ secrets.EXAMPLE_TRACK_URL }}
+          EXAMPLE_USER_ID: ${{ secrets.EXAMPLE_USER_ID }}
+          EXAMPLE_USER_URL: ${{ secrets.EXAMPLE_USER_URL }}
 
       - name: codecov
         uses: codecov/codecov-action@v1
