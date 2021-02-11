@@ -1,6 +1,6 @@
 {
   "name": "opensoundcloud",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A thin SoundCloud API, APIv2 and web-scrape wrapper written in TypeScript.",
   "main": "lib/soundcloud.js",
   "types": "lib/soundcloud.d.ts",
