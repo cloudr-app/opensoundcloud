@@ -2,8 +2,7 @@
   "name": "opensoundcloud",
   "version": "0.0.2",
   "description": "A thin SoundCloud API, APIv2 and web-scrape wrapper written in TypeScript.",
-  "main": "lib/soundcloud.js",
-  "types": "lib/soundcloud.d.ts",
+  "main": "lib/src/index.js",
   "files": [
     "lib/**/*"
   ],
@@ -27,7 +26,7 @@
     "music"
   ],
   "author": "vaaski <admin@vaa.ski>",
-  "license": "GPL-3.0-only",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
