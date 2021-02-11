@@ -1,7 +1,7 @@
 {
-  "watch": ["src"],
+  "watch": ["src", "types", "demo.ts"],
   "ext": "ts, json",
-  "exec": "npx ts-node ./src/index.ts",
+  "exec": "npx ts-node -r dotenv/config ./demo.ts",
   "events": {
     "start": "node -e console.clear()"
   }

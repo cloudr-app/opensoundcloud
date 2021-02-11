@@ -72,13 +72,11 @@
           }
         }
       ],
-      "@typescript-eslint/no-explicit-any": [
-        "off"
-      ],
       "@typescript-eslint/indent": [
         "error",
         2
-      ]
+      ],
+      "@typescript-eslint/no-explicit-any": "off"
     },
     "overrides": [
       {
