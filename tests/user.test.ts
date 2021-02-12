@@ -57,6 +57,12 @@ test("get users likes using ID", async t => {
   t.truthy(data.collection[0].track.id)
 })
 
+test("get users likes using ID without explicit limit", async t => {
+  const data = await user.likes(exampleUserID)
+  t.truthy(data)
+  t.truthy(data.collection[0].track.id)
+})
+
 test("get users likes using ID and client_id", async t => {
   const data = await user.likes(exampleUserID, { limit: 2, client_id })
   t.assert(data.collection.length === 2)

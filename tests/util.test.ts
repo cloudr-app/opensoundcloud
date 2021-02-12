@@ -1,7 +1,7 @@
 import test from "ava"
 import { user } from "../src"
 
-import { at, getClientIDv2 } from "../src/util"
+import { at, getClientIDv2, paginateNext } from "../src/util"
 
 const testArray = ["one", "two", "three"]
 const exampleUserID = Number(process.env.EXAMPLE_USER_ID) || 0
@@ -30,4 +30,10 @@ test("pagination works as expected", async t => {
   t.assert(data1?.collection.length === 2)
   t.notDeepEqual(data0.collection[0], data1?.collection[0])
   t.assert(data0.collection[0].track.id !== data1?.collection[0].track.id)
+})
+
+// TODO write a better test than this
+test("pagination without explicit params", t => {
+  const paginated = paginateNext("")
+  t.assert(typeof paginated === "function")
 })
