@@ -44,3 +44,25 @@ export const getClientIDv2 = async (): Promise<string> => {
   /* istanbul ignore next */
   throw new Error(`Can't find client_id, please report this to ${issueURL}`)
 }
+
+export type PaginatedResponse<K> = {
+  collection: K
+  next?: () => Promise<PaginatedResponse<K>>
+}
+export const paginateNext = <K>(url: string, params: Record<string, string | number> = {}) => {
+  return async (): Promise<PaginatedResponse<K>> => {
+    const _url = new URL(url)
+    const _params = Object.fromEntries(_url.searchParams.entries())
+    const searchParams = { ..._params, ...params }
+
+    const data = (await ky.get(url, { searchParams }).json()) as Record<string, any>
+
+    const ret: PaginatedResponse<K> = {
+      collection: data.collection,
+    }
+    /* istanbul ignore next */
+    if (data.next_href) ret.next = paginateNext(data.next_href, params)
+
+    return ret
+  }
+}

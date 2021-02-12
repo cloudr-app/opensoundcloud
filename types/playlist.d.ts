@@ -1,4 +1,4 @@
-// generated using https://app.quicktype.io?share=UbYYuHKgg7Y1IQHehR6A
+// generated with https://app.quicktype.io?share=UbYYuHKgg7Y1IQHehR6A
 
 export interface Playlistv2 {
   artwork_url: null
