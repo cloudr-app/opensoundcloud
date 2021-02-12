@@ -5,7 +5,7 @@ import ky from "ky-universal"
 import { APIv2, getClientIDv2, scrapeData, ScrapeIDs, urlify } from "./util"
 
 /**
- * Get a playlist using the APIv2 with a playlist ID
+ * Get a playlist by ID using the APIv2.
  * @param id A playlist ID
  * @param client_id client_id for APIv2
  */
@@ -18,7 +18,7 @@ const byID = async (id: number, client_id: ClientIDv2) => {
 }
 
 /**
- * Get a playlist using the APIv2 with a playlist URL
+ * Get a playlist by URL using the APIv2.
  * @param url A playlist URL
  */
 const byURL = async (url: string) => {
@@ -31,13 +31,12 @@ const byURL = async (url: string) => {
 }
 
 /**
- * Get a playlist using the APIv2 with either a playlist URL or its ID.
+ * Get a playlist by either URL or ID using the APIv2.
  *
- * If you use a playlist ID, you can provide a v2 client_id (recommended).
- *
+ * If you use a playlist ID, you can provide a v2 client_id to speed up the process (recommended).
  * Uses `util.getClientIDv2` to find a client_id if none is provided.
  * @param identifier A playlist URL or ID
- * @param client_id Optional.
+ * @param client_id Optional client_id for APIv2.
  */
 const playlist = async (identifier: URLorID, client_id?: ClientIDv2): Promise<Playlistv2> => {
   if (typeof identifier === "string") return await byURL(identifier)
