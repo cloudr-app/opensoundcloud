@@ -9,7 +9,7 @@ import { APIv2, getClientIDv2, scrapeData, ScrapeIDs, urlify } from "./util"
  * @param id A playlist ID
  * @param client_id client_id for APIv2
  */
-const byID = async (id: number, client_id: ClientIDv2): Promise<Playlistv2> => {
+const byID = async (id: number, client_id: ClientIDv2) => {
   const url = urlify(`playlists/${id}`, APIv2)
   const searchParams = { client_id }
 
@@ -21,13 +21,13 @@ const byID = async (id: number, client_id: ClientIDv2): Promise<Playlistv2> => {
  * Get a playlist using the APIv2 with a playlist URL
  * @param url A playlist URL
  */
-const byURL = async (url: string): Promise<Playlistv2> => {
+const byURL = async (url: string) => {
   const scraped = await scrapeData(urlify(url))
   const playlistData = scraped.find(({ id }) => id === ScrapeIDs.playlist)
   if (!playlistData) throw new Error("No playlist data found.")
 
-  const { data } = playlistData
-  return data[0] as Playlistv2
+  const [data] = playlistData.data
+  return data as Playlistv2
 }
 
 /**
@@ -36,15 +36,15 @@ const byURL = async (url: string): Promise<Playlistv2> => {
  * If you use a playlist ID, you can provide a v2 client_id (recommended).
  *
  * Uses `util.getClientIDv2` to find a client_id if none is provided.
- * @param source A playlist URL or ID
+ * @param identifier A playlist URL or ID
  * @param client_id Optional.
  */
-const playlist = async (source: URLorID, client_id?: string): Promise<Playlistv2> => {
-  if (typeof source === "string") return await byURL(source)
+const playlist = async (identifier: URLorID, client_id?: ClientIDv2): Promise<Playlistv2> => {
+  if (typeof identifier === "string") return await byURL(identifier)
 
-  if (typeof source === "number") {
+  if (typeof identifier === "number") {
     if (!client_id) client_id = await getClientIDv2()
-    return await byID(source, client_id)
+    return await byID(identifier, client_id)
   }
 
   throw new Error("Source must be a string (URL) or a number (ID)")

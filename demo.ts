@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { playlist, resolve } from "./src"
+import { playlist, resolve, user } from "./src"
 import { writeFileSync } from "fs"
 import { getClientIDv2 } from "./src/util"
 import { join } from "path"
@@ -22,12 +22,15 @@ const client_id2 = process.env.SOUNDCLOUD_CLIENT_ID_V2 || "client_id"
 const examplePlaylistURL = process.env.EXAMPLE_PLAYLIST_URL || ""
 const examplePlaylistID = Number(process.env.EXAMPLE_PLAYLIST_ID) || 0
 const exampleUserURL = process.env.EXAMPLE_USER_URL || ""
+const exampleUserID = Number(process.env.EXAMPLE_USER_ID) || 0
 const exampleTrackURL = process.env.EXAMPLE_TRACK_URL || ""
 
 !(async () => {
   const startTime = Date.now()
 
-  const out = await playlist(examplePlaylistURL)
+  const out = await user(exampleUserID)
+  // const out = await user(exampleUserURL)
+  // const out = await playlist(examplePlaylistURL)
   // const out = await playlist(examplePlaylistID)
   // const out = await getClientIDv2()
   // const out = await resolve(exampleUserURL)
@@ -38,7 +41,7 @@ const exampleTrackURL = process.env.EXAMPLE_TRACK_URL || ""
   // const out = await resolve.browser(examplePlaylistURL, client_id)
 
   console.log(
-    `fetched ${formatSize(byteLength(out))} in ${Date.now() - startTime}ms\n` +
+    `fetched ${formatSize(byteLength(out))} of data in ${Date.now() - startTime}ms\n` +
       `see ${join(__dirname, "demo_out.json")}`
   )
 
