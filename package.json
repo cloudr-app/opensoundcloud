@@ -12,6 +12,7 @@
   },
   "scripts": {
     "dev": "nodemon",
+    "demo": "ts-node -r dotenv/config ./demo.ts",
     "build": "rimraf lib && tsc",
     "test": "nyc --reporter=lcov ava",
     "commit": "git cz -S",

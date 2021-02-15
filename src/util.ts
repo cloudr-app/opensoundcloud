@@ -66,3 +66,6 @@ export const paginateNext = <K>(url: string, params: Record<string, string | num
     return ret
   }
 }
+
+// TODO build something like ensureMin() which would tale a PaginatedResponse and
+// return the specified amount of items regardless of what the weird soundcloud API does

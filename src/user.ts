@@ -1,5 +1,11 @@
-import type { ClientIDv2, URLorID } from "../types"
-import type { Userv2, UserLikesv2, Collection } from "../types/user"
+import type { ClientIDv2, PaginatedOptions, URLorID } from "../types"
+import type {
+  Userv2,
+  UserLikesv2,
+  UserLikesv2Collection,
+  TrackElement,
+  UserTracksv2,
+} from "../types/user"
 
 import ky from "ky-universal"
 import {
@@ -58,12 +64,9 @@ const user = async (identifier: URLorID, client_id?: ClientIDv2): Promise<Userv2
   throw new Error("Source must be a string (URL) or a number (ID)")
 }
 
-export interface LikesOptions {
-  limit?: number
-  client_id?: ClientIDv2
-}
 /**
  * Get a user's likes by either URL or ID using the APIv2.
+ * Using an ID is recommended, it saves one resolve request.
  *
  * You can provide a v2 client_id to speed up the process (recommended).
  * Uses `util.getClientIDv2` to find a client_id if none is provided.
@@ -74,8 +77,8 @@ export interface LikesOptions {
  */
 user.likes = async (
   identifier: URLorID,
-  { limit = 50, client_id }: LikesOptions = {}
-): Promise<PaginatedResponse<Collection[]>> => {
+  { limit = 50, client_id }: PaginatedOptions = {}
+): Promise<PaginatedResponse<UserLikesv2Collection[]>> => {
   if (typeof identifier === "string") identifier = (await resolve(identifier)).id
   if (!client_id) client_id = await getClientIDv2()
 
@@ -84,7 +87,24 @@ user.likes = async (
 
   const data = (await ky(url, { searchParams }).json()) as UserLikesv2
 
-  const ret: PaginatedResponse<Collection[]> = data
+  const ret: PaginatedResponse<UserLikesv2Collection[]> = data
+  /* istanbul ignore next */
+  if (data.next_href) ret.next = paginateNext(data.next_href, searchParams)
+  return ret
+}
+
+user.tracks = async (
+  identifier: URLorID,
+  { limit = 50, client_id }: PaginatedOptions = {}
+) => {
+  if (typeof identifier === "string") identifier = (await resolve(identifier)).id
+  if (!client_id) client_id = await getClientIDv2()
+
+  const searchParams = { client_id, limit }
+  const url = urlify(`users/${identifier}/tracks`, APIv2)
+  const data = (await ky(url, { searchParams }).json()) as UserTracksv2
+
+  const ret: PaginatedResponse<TrackElement[]> = data
   /* istanbul ignore next */
   if (data.next_href) ret.next = paginateNext(data.next_href, searchParams)
   return ret

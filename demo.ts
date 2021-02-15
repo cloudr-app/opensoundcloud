@@ -29,10 +29,15 @@ const exampleTrackURL = process.env.EXAMPLE_TRACK_URL || ""
   console.log("start")
   const startTime = Date.now()
 
-  const out1 = await user.likes(exampleUserURL, { limit: 5 })
-  const out2 = await out1.next?.()
-  const out = [...out1.collection, ...(out2?.collection || [])]
+  // const out1 = await user.tracks(exampleUserID, { limit: 5 })
+  // const out2 = await out1.next?.()
+  // const out = [...out1.collection, ...(out2?.collection || [])]
 
+  // const out1 = await user.likes(exampleUserURL, { limit: 5 })
+  // const out2 = await out1.next?.()
+  // const out = [...out1.collection, ...(out2?.collection || [])]
+
+  const out = await user.tracks(exampleUserID, { limit: 50 })
   // const out = await user.likes(exampleUserID)
   // const out = await user(exampleUserID)
   // const out = await user(exampleUserURL)
@@ -45,6 +50,10 @@ const exampleTrackURL = process.env.EXAMPLE_TRACK_URL || ""
   // const out = await resolve.browser(exampleUserURL, client_id)
   // const out = await resolve.browser(exampleTrackURL, client_id)
   // const out = await resolve.browser(examplePlaylistURL, client_id)
+
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  if ("collection" in out) console.log(`got ${out.collection.length} items in collection`)
 
   console.log(
     `fetched ${formatSize(byteLength(out))} of data in ${Date.now() - startTime}ms\n` +

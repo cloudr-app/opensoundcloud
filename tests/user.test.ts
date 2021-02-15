@@ -45,14 +45,12 @@ test("get user by ID throws when not found", async t => {
 
 test("get users likes using URL", async t => {
   const data = await user.likes(exampleUserURL, { limit: 2 })
-  t.assert(data.collection.length === 2)
   t.truthy(data)
   t.truthy(data.collection[0].track.id)
 })
 
 test("get users likes using ID", async t => {
   const data = await user.likes(exampleUserID, { limit: 2 })
-  t.assert(data.collection.length === 2)
   t.truthy(data)
   t.truthy(data.collection[0].track.id)
 })
@@ -65,7 +63,30 @@ test("get users likes using ID without explicit limit", async t => {
 
 test("get users likes using ID and client_id", async t => {
   const data = await user.likes(exampleUserID, { limit: 2, client_id })
-  t.assert(data.collection.length === 2)
   t.truthy(data)
   t.truthy(data.collection[0].track.id)
+})
+
+test("get users tracks using URL", async t => {
+  const data = await user.tracks(exampleUserURL, { limit: 2 })
+  t.truthy(data)
+  t.truthy(data.collection[0].id)
+})
+
+test("get users tracks using ID", async t => {
+  const data = await user.tracks(exampleUserID, { limit: 2 })
+  t.truthy(data)
+  t.truthy(data.collection[0].id)
+})
+
+test("get users tracks using ID without explicit limit", async t => {
+  const data = await user.tracks(exampleUserID)
+  t.truthy(data)
+  t.truthy(data.collection[0].id)
+})
+
+test("get users tracks using ID and client_id", async t => {
+  const data = await user.tracks(exampleUserID, { limit: 2, client_id })
+  t.truthy(data)
+  t.truthy(data.collection[0].id)
 })

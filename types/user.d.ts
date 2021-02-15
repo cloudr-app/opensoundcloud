@@ -1,28 +1,18 @@
-// generated with https://app.quicktype.io?share=hs82nzuA9jUPyaliNYv9
+// generated with https://app.quicktype.io?share=IAHWnozVhjhjEkl8jObh
 
-export interface UserLikesv2 {
-  collection: Collection[]
+export interface UserTracksv2 {
+  collection: TrackElement[]
   next_href: string
   query_urn: null
 }
 
-export interface Collection {
-  created_at: Date
-  kind: CollectionKind
-  track: Track
-}
-
-export enum CollectionKind {
-  Like = "like",
-}
-
-export interface Track {
+export interface TrackElement {
   artwork_url: null | string
   caption: null | string
   commentable: boolean
   comment_count: number
   created_at: Date
-  description: string
+  description: null | string
   downloadable: boolean
   download_count: number
   duration: number
@@ -106,7 +96,9 @@ export enum Protocol {
 }
 
 export enum Preset {
+  Mp30_0 = "mp3_0_0",
   Mp30_1 = "mp3_0_1",
+  Mp3Standard = "mp3_standard",
   Opus0_0 = "opus_0_0",
 }
 
@@ -128,17 +120,29 @@ export enum Policy {
 export interface PublisherMetadata {
   id: number
   urn: string
+  contains_music?: boolean
   artist?: string
   album_title?: string
-  contains_music: boolean
-  isrc?: string
   publisher?: string
-  writer_composer?: string
-  release_title?: string
   explicit?: boolean
-  upc_or_ean?: string
   p_line?: string
   p_line_for_display?: string
+  writer_composer?: string
+  release_title?: string
+  isrc?: string
+  upc_or_ean?: string
+  c_line?: CLine
+  c_line_for_display?: CLineForDisplay
+}
+
+export enum CLine {
+  The2017DivisionRecordings = "2017 Division Recordings",
+  The2017VisionRecordings = "2017 Vision Recordings",
+}
+
+export enum CLineForDisplay {
+  The2017DivisionRecordings = "© 2017 Division Recordings",
+  The2017VisionRecordings = "© 2017 Vision Recordings",
 }
 
 export enum Sharing {
@@ -155,12 +159,12 @@ export enum TrackFormat {
 
 export interface User {
   avatar_url: string
-  first_name: string
-  full_name: string
+  first_name: FirstName
+  full_name: FullName
   id: number
   kind: UserKind
   last_modified: Date
-  last_name: string
+  last_name: LastName
   permalink: string
   permalink_url: string
   uri: string
@@ -168,7 +172,7 @@ export interface User {
   username: string
   verified: boolean
   city: null | string
-  country_code: null | string
+  country_code: CountryCode | null
   badges: Badges
 }
 
@@ -178,15 +182,72 @@ export interface Badges {
   verified: boolean
 }
 
+export enum CountryCode {
+  Be = "BE",
+  CA = "CA",
+  GB = "GB",
+  Hn = "HN",
+  Jp = "JP",
+  Us = "US",
+}
+
+export enum FirstName {
+  Boneidol = "BONEIDOL",
+  Callister = "Callister",
+  Christian = "Christian",
+  Empty = "",
+  Fkof = "FKOF",
+  Jack = "Jack",
+  Richard = "Richard",
+  SouthFlorida = "South Florida",
+}
+
+export enum FullName {
+  Boneidol = "BONEIDOL",
+  CallisterJames = "Callister James",
+  ChristianFial = "Christian Fial",
+  Empty = "",
+  FKOFRecords = "FKOF Records",
+  JackHaigh = "Jack Haigh",
+  RichardLibor = "Richard Libor",
+  SouthFloridaBrowardCounty = "South Florida Broward County",
+}
+
 export enum UserKind {
   User = "user",
+}
+
+export enum LastName {
+  BrowardCounty = "Broward County",
+  Empty = "",
+  Fial = "Fial",
+  Haigh = "Haigh",
+  James = "James",
+  Libor = "Libor",
+  Records = "Records",
+}
+
+export interface UserLikesv2 {
+  collection: UserLikesv2Collection[]
+  next_href: string
+  query_urn: null
+}
+
+export interface UserLikesv2Collection {
+  created_at: Date
+  kind: PurpleKind
+  track: TrackElement
+}
+
+export enum PurpleKind {
+  Like = "like",
 }
 
 export interface Userv2 {
   avatar_url: string
   city: string
   comments_count: number
-  country_code: null | string
+  country_code: CountryCode | null
   created_at: Date
   creator_subscriptions: CreatorSubscription[]
   creator_subscription: CreatorSubscription
@@ -199,7 +260,7 @@ export interface Userv2 {
   id: number
   kind: UserKind
   last_modified: Date
-  last_name: string
+  last_name: LastName
   likes_count: number
   playlist_likes_count: number
   permalink: string
