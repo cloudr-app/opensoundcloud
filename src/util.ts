@@ -67,5 +67,25 @@ export const paginateNext = <K>(url: string, params: Record<string, string | num
   }
 }
 
-// TODO build something like ensureMin() which would tale a PaginatedResponse and
-// return the specified amount of items regardless of what the weird soundcloud API does
+/**
+ * Automatically uses paginateNext to fetch the minimum amount of items requested.
+ * This is for users like "space-laces" for which the API returns no tracks for
+ * about the first 5 requests. Might return more than the specified minimum.
+ * @param paginated a `PaginatedResponse` as returned by `paginateNext`
+ * @param min the minimum amount of items you want to receive in the collection
+ * @example
+ * await util.ensureMin(await user.tracks("space-laces", { limit: 20 }), 10)
+ * // returns an object with a collection property that has a minimum of 10 items
+ */
+export const ensureMin = async <K extends any[]>(
+  paginated: PaginatedResponse<K>,
+  min: number
+): Promise<PaginatedResponse<K>> => {
+  if (paginated.collection.length < min && paginated.next) {
+    const next = await paginated.next()
+    const collection = [...paginated.collection, ...next.collection] as K
+    return ensureMin({ ...next, collection }, min)
+  }
+
+  return paginated
+}

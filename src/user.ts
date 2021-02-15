@@ -2,7 +2,7 @@ import type { ClientIDv2, PaginatedOptions, URLorID } from "../types"
 import type {
   Userv2,
   UserLikesv2,
-  UserLikesv2Collection,
+  UserLikesv2Element,
   TrackElement,
   UserTracksv2,
 } from "../types/user"
@@ -48,7 +48,7 @@ const getByURL = async (url: string) => {
 /**
  * Get a user by either URL or ID using the APIv2.
  *
- * You can provide a v2 client_id to speed up the process (recommended).
+ * You can provide a v2 client_id to save one scrape request (recommended).
  * Uses `util.getClientIDv2` to find a client_id if none is provided.
  * @param identifier A user URL or ID
  * @param client_id Optional client_id for APIv2.
@@ -66,19 +66,16 @@ const user = async (identifier: URLorID, client_id?: ClientIDv2): Promise<Userv2
 
 /**
  * Get a user's likes by either URL or ID using the APIv2.
- * Using an ID is recommended, it saves one resolve request.
+ * Using an ID is recommended, as it saves one resolve request.
  *
- * You can provide a v2 client_id to speed up the process (recommended).
+ * You can provide a v2 client_id to save one scrape request (recommended).
  * Uses `util.getClientIDv2` to find a client_id if none is provided.
  * @param identifier A user URL or ID
  * @param options Optional options object.
  * @param options.limit Limit the amount of tracks returned. Defaults to 50.
  * @param options.client_id client_id for APIv2.
  */
-user.likes = async (
-  identifier: URLorID,
-  { limit = 50, client_id }: PaginatedOptions = {}
-): Promise<PaginatedResponse<UserLikesv2Collection[]>> => {
+user.likes = async (identifier: URLorID, { limit = 50, client_id }: PaginatedOptions = {}) => {
   if (typeof identifier === "string") identifier = (await resolve(identifier)).id
   if (!client_id) client_id = await getClientIDv2()
 
@@ -87,12 +84,23 @@ user.likes = async (
 
   const data = (await ky(url, { searchParams }).json()) as UserLikesv2
 
-  const ret: PaginatedResponse<UserLikesv2Collection[]> = data
+  const ret: PaginatedResponse<UserLikesv2Element[]> = data
   /* istanbul ignore next */
   if (data.next_href) ret.next = paginateNext(data.next_href, searchParams)
   return ret
 }
 
+/**
+ * Get a user's tracks by either URL or ID using the APIv2.
+ * Using an ID is recommended, as it saves one resolve request.
+ *
+ * You can provide a v2 client_id to save one scrape request (recommended).
+ * Uses `util.getClientIDv2` to find a client_id if none is provided.
+ * @param identifier A user URL or ID
+ * @param options Optional options object.
+ * @param options.limit Limit the amount of tracks returned. Defaults to 50.
+ * @param options.client_id client_id for APIv2.
+ */
 user.tracks = async (
   identifier: URLorID,
   { limit = 50, client_id }: PaginatedOptions = {}

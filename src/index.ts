@@ -1,6 +1,9 @@
 import resolve from "./resolve"
 import playlist from "./playlist"
 import user from "./user"
+import { ensureMin } from "./util"
 
-export default { resolve, playlist, user }
-export { resolve, playlist, user }
+const util = { ensureMin }
+
+export default { resolve, playlist, user, util }
+export { resolve, playlist, user, util }

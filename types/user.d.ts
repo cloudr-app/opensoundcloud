@@ -228,12 +228,12 @@ export enum LastName {
 }
 
 export interface UserLikesv2 {
-  collection: UserLikesv2Collection[]
+  collection: UserLikesv2Element[]
   next_href: string
   query_urn: null
 }
 
-export interface UserLikesv2Collection {
+export interface UserLikesv2Element {
   created_at: Date
   kind: PurpleKind
   track: TrackElement

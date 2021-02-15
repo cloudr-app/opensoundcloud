@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { playlist, resolve, user } from "./src"
+import { playlist, resolve, user, util } from "./src"
 import { writeFileSync } from "fs"
 import { getClientIDv2 } from "./src/util"
 import { join } from "path"
+import { TrackElement } from "./types/user"
 
 const byteLength = (input: any) => Buffer.byteLength(JSON.stringify(input) || "", "utf8")
 const formatSize = (bytes: number, decimals = 2) => {
@@ -37,7 +38,8 @@ const exampleTrackURL = process.env.EXAMPLE_TRACK_URL || ""
   // const out2 = await out1.next?.()
   // const out = [...out1.collection, ...(out2?.collection || [])]
 
-  const out = await user.tracks(exampleUserID, { limit: 50 })
+  const out = await util.ensureMin(await user.tracks("space-laces", { limit: 10 }), 10)
+
   // const out = await user.likes(exampleUserID)
   // const out = await user(exampleUserID)
   // const out = await user(exampleUserURL)

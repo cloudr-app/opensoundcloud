@@ -1,5 +1,5 @@
 import test from "ava"
-import { user } from "../src"
+import { user, util } from "../src"
 
 import { at, getClientIDv2, paginateNext } from "../src/util"
 
@@ -32,8 +32,15 @@ test("pagination works as expected", async t => {
   t.assert(data0.collection[0].track.id !== data1?.collection[0].track.id)
 })
 
-// TODO write a better test than this
 test("pagination without explicit params", t => {
   const paginated = paginateNext("")
   t.assert(typeof paginated === "function")
+})
+
+test("ensureMin always returns the correct amount of tracks", async t => {
+  // space-laces seems to especially problematic, often requiring about 5
+  // requests until something is actually returned
+  const limit = 10
+  const out = await util.ensureMin(await user.tracks("space-laces", { limit }), limit)
+  t.assert(out.collection.length >= limit)
 })
