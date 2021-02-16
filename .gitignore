@@ -4,3 +4,4 @@ lib
 demo_out.json
 .nyc_output
 coverage
+.temp

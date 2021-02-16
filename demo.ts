@@ -38,11 +38,11 @@ const exampleTrackURL = process.env.EXAMPLE_TRACK_URL || ""
   // const out2 = await out1.next?.()
   // const out = [...out1.collection, ...(out2?.collection || [])]
 
-  const out = await util.ensureMin(await user.tracks("space-laces", { limit: 10 }), 10)
+  // const out = await util.ensureMin(await user.tracks("space-laces", { limit: 10 }), 10)
 
-  // const out = await user.likes(exampleUserID)
+  // const out = await user.likes(exampleUserID, { limit: 2 })
   // const out = await user(exampleUserID)
-  // const out = await user(exampleUserURL)
+  const out = await user(exampleUserURL)
   // const out = await playlist(examplePlaylistURL)
   // const out = await playlist(examplePlaylistID)
   // const out = await getClientIDv2()

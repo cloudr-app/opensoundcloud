@@ -7,7 +7,8 @@
     "lcov",
     "npmrc",
     "sndcdn",
-    "urlify"
+    "urlify",
+    "vuepress"
   ],
   "cSpell.ignorePaths": [
     "**/package-lock.json",
