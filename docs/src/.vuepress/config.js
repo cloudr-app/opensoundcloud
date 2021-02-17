@@ -31,7 +31,7 @@ module.exports = {
   themeConfig: {
     prefersTheme: "dark",
     repo: "cloudr-app/opensoundcloud",
-    docsDir: "docs",
+    docsDir: "docs/src",
     editLinks: true,
     editLinkText: "edit this page",
     lastUpdated: true,
