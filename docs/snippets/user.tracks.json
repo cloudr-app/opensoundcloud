@@ -1,0 +1,239 @@
+{
+  "collection": [
+    {
+      "artwork_url": "https://i1.sndcdn.com/artworks-01jMDBCQjw4gyd3s-EslJMA-large.jpg",
+      "caption": null,
+      "commentable": true,
+      "comment_count": 32,
+      "created_at": "2020-10-21T15:53:42Z",
+      "description": "'Outer Edges ∴ Live' is out now via VISION: vision.fanlink.to/VSN074\n\n“This was the most ambitious thing we ever did together: creating an audiovisual show around our own album, ‘Outer Edges‘. It meant building an audiovisual instrument first (with Roy yfxlab, Merijn Kijkbuiskinderen and Manuel deepred.tv) and thén a show to perform on that instrument. Everything synced, but controlled live, to create one cohesive experience. It was a lot of work, and a lot of stress – especially when the actual album leaked and we found out minutes before going on stage to perform it for the first time – but it is something we are still very proud of. The visuals were all custom made, a lot of them by Nik himself who VJ’d during the set, Thijs brought a part of his modular setup to jam on stage, and Martijn controlled the flow of the songs through Ableton. It felt like the ultimate way to perform our music.” – Noisia\n\nArtwork by https://tomjager.nl\n\n@noisia\nDiscord → discord.gg/noisia\nInstagram → instagram.com/noisia_official\nSpotify → bit.ly/NoisiaSpotify\nPatreon →www.patreon.com/noisia\n\n@visionrecordings\nTwitter → twitter.com/visionrecs\nInstagram → instagram.com/visionrecordings",
+      "downloadable": false,
+      "download_count": 0,
+      "duration": 3656777,
+      "full_duration": 3656777,
+      "embeddable_by": "all",
+      "genre": "VSN074",
+      "has_downloads_left": true,
+      "id": 915521593,
+      "kind": "track",
+      "label_name": "VISION",
+      "last_modified": "2020-11-03T22:20:31Z",
+      "license": "all-rights-reserved",
+      "likes_count": 761,
+      "permalink": "outer-edges-live",
+      "permalink_url": "https://soundcloud.com/noisia/outer-edges-live",
+      "playback_count": 15637,
+      "public": true,
+      "publisher_metadata": {
+        "id": 915521593,
+        "urn": "soundcloud:tracks:915521593",
+        "artist": "Noisia",
+        "album_title": "Outer Edges ∴ Live",
+        "contains_music": false,
+        "publisher": "Copyright Control",
+        "explicit": false,
+        "p_line": "2020 VISION",
+        "p_line_for_display": "℗ 2020 VISION",
+        "writer_composer": "Thijs de Vlieger, Nik Roos, Martijn van Sonderen",
+        "release_title": "Outer Edges ∴ Live"
+      },
+      "purchase_title": "Stream / Download",
+      "purchase_url": "http://vision.fanlink.to/VSN074",
+      "release_date": "2020-10-21T00:00:00Z",
+      "reposts_count": 96,
+      "secret_token": null,
+      "sharing": "public",
+      "state": "finished",
+      "streamable": true,
+      "tag_list": "noisia \"outer edges\" \"outer edges live\" \"noisia live\" \"drum and bass\" vision",
+      "title": "Outer Edges ∴ Live",
+      "track_format": "single-track",
+      "uri": "https://api.soundcloud.com/tracks/915521593",
+      "urn": "soundcloud:tracks:915521593",
+      "user_id": 116681,
+      "visuals": null,
+      "waveform_url": "https://wave.sndcdn.com/MGbDTMwEy8xu_m.json",
+      "display_date": "2020-10-21T15:53:42Z",
+      "media": {
+        "transcodings": [
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:915521593/829aec02-0cdf-48b7-817d-c7c19173e6da/stream/hls",
+            "preset": "mp3_0_1",
+            "duration": 3656777,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/mpeg"
+            },
+            "quality": "sq"
+          },
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:915521593/829aec02-0cdf-48b7-817d-c7c19173e6da/stream/progressive",
+            "preset": "mp3_0_1",
+            "duration": 3656777,
+            "snipped": false,
+            "format": {
+              "protocol": "progressive",
+              "mime_type": "audio/mpeg"
+            },
+            "quality": "sq"
+          },
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:915521593/1e89f510-9244-433c-9bb8-6bfa59e21123/stream/hls",
+            "preset": "opus_0_0",
+            "duration": 3656733,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/ogg; codecs=\"opus\""
+            },
+            "quality": "sq"
+          }
+        ]
+      },
+      "monetization_model": "NOT_APPLICABLE",
+      "policy": "ALLOW",
+      "user": {
+        "avatar_url": "https://i1.sndcdn.com/avatars-000451809714-n5njwk-large.jpg",
+        "first_name": "",
+        "full_name": "",
+        "id": 116681,
+        "kind": "user",
+        "last_modified": "2021-01-13T12:34:24Z",
+        "last_name": "",
+        "permalink": "noisia",
+        "permalink_url": "https://soundcloud.com/noisia",
+        "uri": "https://api.soundcloud.com/users/116681",
+        "urn": "soundcloud:users:116681",
+        "username": "NOISIA",
+        "verified": true,
+        "city": "",
+        "country_code": null,
+        "badges": {
+          "pro": false,
+          "pro_unlimited": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "artwork_url": "https://i1.sndcdn.com/artworks-000673544905-adf5yl-large.jpg",
+      "caption": null,
+      "commentable": true,
+      "comment_count": 34,
+      "created_at": "2020-01-24T16:33:48Z",
+      "description": "Stream / Download: https://fanlink.to/Armajet\nArmajet (Original Game Soundtrack) is out now.\n\nArmajet is a game with its roots in 90’s twitch shooters. Hardcore, unforgiving, instant, inhuman. \nThe match with our music was obvious. We didn’t have to work out much about what it needed to sound like. \nThe music we made for it isn’t purely about Armajet itself, though. A lot of other elements come through: the frustration over our breaking up, my personal attachment to to 90/00’s twitch shooter genre (UT99 specifically), the 90’s trance sound of detuned saw arps, and the developing 3D game graphics of the time: futuristic, unnatural and new. \nThe music reflects these 90’s gamer kicks; seeking the maximum challenge, speed, reflexes, resolution, framerate, information density, eyes wide open from energy drinks, falling asleep on your keyboard at a LAN party. How fast can my brain go, how much can I take. What has now arguably become a chronic disease for everyone with a smartphone back then was the rush we were after. Nailing that impossible shock combo or headshot in a flow state, watching each other discover seemingly inhuman levels of mastery in a different reality. The digital frontier. \nWe hope you enjoy the music. And GLHF <3\n\nArtwork by https://http://www.khomatech.com\n\n@noisia\nDiscord → discord.gg/noisia\nInstagram → instagram.com/noisia_official\nSpotify → bit.ly/NoisiaSpotify\nPatreon →https://www.patreon.com/noisia\n\n@visionrecordings\nTwitter → https://twitter.com/visionrecs\nInstagram → https://instagram.com/visionrecordings",
+      "downloadable": false,
+      "download_count": 0,
+      "duration": 132833,
+      "full_duration": 132833,
+      "embeddable_by": "all",
+      "genre": "VSN054",
+      "has_downloads_left": true,
+      "id": 748808698,
+      "kind": "track",
+      "label_name": "Vision Recordings",
+      "last_modified": "2020-09-25T20:53:32Z",
+      "license": "all-rights-reserved",
+      "likes_count": 747,
+      "permalink": "vaporized-armajet-soundtrack",
+      "permalink_url": "https://soundcloud.com/noisia/vaporized-armajet-soundtrack",
+      "playback_count": 29223,
+      "public": true,
+      "publisher_metadata": {
+        "id": 748808698,
+        "urn": "soundcloud:tracks:748808698",
+        "artist": "Noisia",
+        "album_title": "Armajet (Original Game Soundtrack)",
+        "contains_music": true,
+        "publisher": "Copyright Control",
+        "isrc": "UKACT2030085",
+        "explicit": false,
+        "p_line": "2020 Vision Recordings",
+        "p_line_for_display": "℗ 2020 Vision Recordings",
+        "writer_composer": "Nik Roos, Martijn van Sonderen, Thijs de Vlieger",
+        "release_title": "Vaporized"
+      },
+      "purchase_title": "Stream / Download",
+      "purchase_url": "https://fanlink.to/Armajet",
+      "release_date": "2020-01-24T00:00:00Z",
+      "reposts_count": 115,
+      "secret_token": null,
+      "sharing": "public",
+      "state": "finished",
+      "streamable": true,
+      "tag_list": "Noisia Vaporized Armajet \"Original Game Soundtrack\" Techno \"Drum & Bass\" Beats Electronica \"Vision Recordings\"",
+      "title": "Vaporized (Armajet Soundtrack)",
+      "track_format": "single-track",
+      "uri": "https://api.soundcloud.com/tracks/748808698",
+      "urn": "soundcloud:tracks:748808698",
+      "user_id": 116681,
+      "visuals": null,
+      "waveform_url": "https://wave.sndcdn.com/rKb9P2VvYLFm_m.json",
+      "display_date": "2020-01-28T16:00:00Z",
+      "media": {
+        "transcodings": [
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:748808698/24dad9d1-f134-4351-8548-e13e11a69f39/stream/hls",
+            "preset": "mp3_0_1",
+            "duration": 132833,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/mpeg"
+            },
+            "quality": "sq"
+          },
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:748808698/24dad9d1-f134-4351-8548-e13e11a69f39/stream/progressive",
+            "preset": "mp3_0_1",
+            "duration": 132833,
+            "snipped": false,
+            "format": {
+              "protocol": "progressive",
+              "mime_type": "audio/mpeg"
+            },
+            "quality": "sq"
+          },
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:748808698/c23a9252-f1db-4929-ad0c-9887acbd3b62/stream/hls",
+            "preset": "opus_0_0",
+            "duration": 132807,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/ogg; codecs=\"opus\""
+            },
+            "quality": "sq"
+          }
+        ]
+      },
+      "monetization_model": "BLACKBOX",
+      "policy": "MONETIZE",
+      "user": {
+        "avatar_url": "https://i1.sndcdn.com/avatars-000451809714-n5njwk-large.jpg",
+        "first_name": "",
+        "full_name": "",
+        "id": 116681,
+        "kind": "user",
+        "last_modified": "2021-01-13T12:34:24Z",
+        "last_name": "",
+        "permalink": "noisia",
+        "permalink_url": "https://soundcloud.com/noisia",
+        "uri": "https://api.soundcloud.com/users/116681",
+        "urn": "soundcloud:users:116681",
+        "username": "NOISIA",
+        "verified": true,
+        "city": "",
+        "country_code": null,
+        "badges": {
+          "pro": false,
+          "pro_unlimited": true,
+          "verified": true
+        }
+      }
+    }
+  ],
+  "next_href": "https://api-v2.soundcloud.com/users/116681/tracks?offset=2020-01-28T16%3A00%3A00.000Z%2Ctracks%2C00748808698&limit=2",
+  "query_urn": null
+}
