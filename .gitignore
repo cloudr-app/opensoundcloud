@@ -6,3 +6,5 @@ demo_out.json
 coverage
 *.temp
 dist
+# Local Netlify folder
+.netlify
