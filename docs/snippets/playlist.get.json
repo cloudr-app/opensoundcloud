@@ -1,0 +1,652 @@
+{
+  "artwork_url": null,
+  "created_at": "2018-10-11T05:45:51Z",
+  "description": null,
+  "duration": 6866905,
+  "embeddable_by": "all",
+  "genre": "",
+  "id": 620756469,
+  "kind": "playlist",
+  "label_name": null,
+  "last_modified": "2021-01-20T17:12:38Z",
+  "license": "all-rights-reserved",
+  "likes_count": 0,
+  "managed_by_feeds": false,
+  "permalink": "rrrrrrrrr",
+  "permalink_url": "https://soundcloud.com/vaaski/sets/rrrrrrrrr",
+  "public": true,
+  "purchase_title": null,
+  "purchase_url": null,
+  "release_date": null,
+  "reposts_count": 0,
+  "secret_token": null,
+  "sharing": "public",
+  "tag_list": "",
+  "title": "rrrrrrrrr",
+  "uri": "https://api.soundcloud.com/playlists/620756469",
+  "user_id": 51999125,
+  "set_type": "",
+  "is_album": false,
+  "published_at": "2018-10-11T05:45:51Z",
+  "display_date": "2018-10-11T05:45:51Z",
+  "user": {
+    "avatar_url": "https://i1.sndcdn.com/avatars-000467483484-sxhijk-large.jpg",
+    "first_name": "",
+    "full_name": "",
+    "id": 51999125,
+    "kind": "user",
+    "last_modified": "2019-01-29T21:22:49Z",
+    "last_name": "",
+    "permalink": "vaaski",
+    "permalink_url": "https://soundcloud.com/vaaski",
+    "uri": "https://api.soundcloud.com/users/51999125",
+    "urn": "soundcloud:users:51999125",
+    "username": "vaaski",
+    "verified": false,
+    "city": "",
+    "country_code": null,
+    "badges": {
+      "pro": false,
+      "pro_unlimited": false,
+      "verified": false
+    }
+  },
+  "tracks": [
+    {
+      "artwork_url": "https://i1.sndcdn.com/artworks-xx5RqE9OyueyUyws-nuXFlA-large.jpg",
+      "caption": null,
+      "commentable": true,
+      "comment_count": 0,
+      "created_at": "2021-01-11T14:14:15Z",
+      "description": "",
+      "downloadable": false,
+      "download_count": 0,
+      "duration": 152738,
+      "full_duration": 152738,
+      "embeddable_by": "all",
+      "genre": "",
+      "has_downloads_left": true,
+      "id": 963513304,
+      "kind": "track",
+      "label_name": null,
+      "last_modified": "2021-01-12T02:30:18Z",
+      "license": "all-rights-reserved",
+      "likes_count": 9,
+      "permalink": "twisted-trip-3-martin-felix-kaczmarski",
+      "permalink_url": "https://soundcloud.com/finnbacon/twisted-trip-3-martin-felix-kaczmarski",
+      "playback_count": 174,
+      "public": true,
+      "publisher_metadata": {
+        "id": 963513304,
+        "urn": "soundcloud:tracks:963513304",
+        "contains_music": true
+      },
+      "purchase_title": null,
+      "purchase_url": null,
+      "release_date": null,
+      "reposts_count": 0,
+      "secret_token": null,
+      "sharing": "public",
+      "state": "finished",
+      "streamable": true,
+      "tag_list": "",
+      "title": "Twisted Trip 3 - Martin Felix Kaczmarski",
+      "track_format": "single-track",
+      "uri": "https://api.soundcloud.com/tracks/963513304",
+      "urn": "soundcloud:tracks:963513304",
+      "user_id": 318896092,
+      "visuals": null,
+      "waveform_url": "https://wave.sndcdn.com/Py2EoWz0yafJ_m.json",
+      "display_date": "2021-01-11T14:14:15Z",
+      "media": {
+        "transcodings": [
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:963513304/a590c23c-fdb4-49f8-8066-8fab4dd69649/stream/hls",
+            "preset": "mp3_0_1",
+            "duration": 152738,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/mpeg"
+            },
+            "quality": "sq"
+          },
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:963513304/a590c23c-fdb4-49f8-8066-8fab4dd69649/stream/progressive",
+            "preset": "mp3_0_1",
+            "duration": 152738,
+            "snipped": false,
+            "format": {
+              "protocol": "progressive",
+              "mime_type": "audio/mpeg"
+            },
+            "quality": "sq"
+          },
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:963513304/c2948590-48d3-49c5-a2dd-aff5d8682fab/stream/hls",
+            "preset": "opus_0_0",
+            "duration": 152701,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/ogg; codecs=\"opus\""
+            },
+            "quality": "sq"
+          }
+        ]
+      },
+      "monetization_model": "NOT_APPLICABLE",
+      "policy": "ALLOW",
+      "user": {
+        "avatar_url": "https://i1.sndcdn.com/avatars-zRuUeHhRgau1azQp-YbzTmg-large.jpg",
+        "first_name": "finnbacon",
+        "full_name": "finnbacon",
+        "id": 318896092,
+        "kind": "user",
+        "last_modified": "2020-12-15T13:44:29Z",
+        "last_name": "",
+        "permalink": "finnbacon",
+        "permalink_url": "https://soundcloud.com/finnbacon",
+        "uri": "https://api.soundcloud.com/users/318896092",
+        "urn": "soundcloud:users:318896092",
+        "username": "FinnBacon",
+        "verified": false,
+        "city": "Ohio",
+        "country_code": "US",
+        "badges": {
+          "pro": false,
+          "pro_unlimited": false,
+          "verified": false
+        }
+      }
+    },
+    {
+      "artwork_url": "https://i1.sndcdn.com/artworks-000117835054-yokrvm-large.jpg",
+      "caption": null,
+      "commentable": true,
+      "comment_count": 113,
+      "created_at": "2015-05-24T03:34:14Z",
+      "description": "",
+      "downloadable": true,
+      "download_count": 1000,
+      "duration": 140211,
+      "full_duration": 140211,
+      "embeddable_by": "all",
+      "genre": "pigs",
+      "has_downloads_left": false,
+      "id": 206933167,
+      "kind": "track",
+      "label_name": null,
+      "last_modified": "2021-01-01T05:27:25Z",
+      "license": "all-rights-reserved",
+      "likes_count": 4309,
+      "permalink": "bacon",
+      "permalink_url": "https://soundcloud.com/abembeats/bacon",
+      "playback_count": 301855,
+      "public": true,
+      "publisher_metadata": {
+        "id": 206933167,
+        "urn": "soundcloud:tracks:206933167"
+      },
+      "purchase_title": "Spotify",
+      "purchase_url": "https://open.spotify.com/album/3NlEv7KuBU6nFRXpAb7V05?si=Jv78W0NwRUWICik1YJlhVQ",
+      "release_date": null,
+      "reposts_count": 406,
+      "secret_token": null,
+      "sharing": "public",
+      "state": "finished",
+      "streamable": true,
+      "tag_list": "rap \"Hip Hop\" Lo-Fi LoFi beats beat",
+      "title": "bacon//.",
+      "track_format": "single-track",
+      "uri": "https://api.soundcloud.com/tracks/206933167",
+      "urn": "soundcloud:tracks:206933167",
+      "user_id": 34943670,
+      "visuals": null,
+      "waveform_url": "https://wave.sndcdn.com/jSCaIqPtaXu0_m.json",
+      "display_date": "2015-05-24T03:34:14Z",
+      "media": {
+        "transcodings": [
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:206933167/cb388c50-6ee3-4f31-a9a6-4e0ea4270cbb/stream/hls",
+            "preset": "mp3_0_0",
+            "duration": 140211,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/mpeg"
+            },
+            "quality": "sq"
+          },
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:206933167/cb388c50-6ee3-4f31-a9a6-4e0ea4270cbb/stream/progressive",
+            "preset": "mp3_0_0",
+            "duration": 140211,
+            "snipped": false,
+            "format": {
+              "protocol": "progressive",
+              "mime_type": "audio/mpeg"
+            },
+            "quality": "sq"
+          },
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:206933167/04b2f136-7a3d-4f66-9c79-82cb4b4237d7/stream/hls",
+            "preset": "opus_0_0",
+            "duration": 140211,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/ogg; codecs=\"opus\""
+            },
+            "quality": "sq"
+          }
+        ]
+      },
+      "monetization_model": "NOT_APPLICABLE",
+      "policy": "ALLOW",
+      "user": {
+        "avatar_url": "https://i1.sndcdn.com/avatars-lHyhCP1p29ykcRxb-sFDrmw-large.jpg",
+        "first_name": "Abe M Beats",
+        "full_name": "Abe M Beats",
+        "id": 34943670,
+        "kind": "user",
+        "last_modified": "2020-12-16T21:14:18Z",
+        "last_name": "",
+        "permalink": "abembeats",
+        "permalink_url": "https://soundcloud.com/abembeats",
+        "uri": "https://api.soundcloud.com/users/34943670",
+        "urn": "soundcloud:users:34943670",
+        "username": "Abe M",
+        "verified": true,
+        "city": "Westwood, Los Angeles",
+        "country_code": null,
+        "badges": {
+          "pro": true,
+          "pro_unlimited": false,
+          "verified": true
+        }
+      }
+    },
+    {
+      "artwork_url": "https://i1.sndcdn.com/artworks-000543538116-e436a9-large.jpg",
+      "caption": null,
+      "commentable": true,
+      "comment_count": 1517,
+      "created_at": "2019-05-29T22:32:14Z",
+      "description": "STREAM/DOWNLOAD LINKS: smarturl.it/ListenToYungGravy\nINSTAGRAM: instagram.com/yunggravy\nTWITTER: twitter.com/yunggravy",
+      "downloadable": false,
+      "download_count": 0,
+      "duration": 153822,
+      "full_duration": 153822,
+      "embeddable_by": "all",
+      "genre": "Hip-hop & Rap",
+      "has_downloads_left": true,
+      "id": 628649295,
+      "kind": "track",
+      "label_name": null,
+      "last_modified": "2021-02-17T06:56:55Z",
+      "license": "all-rights-reserved",
+      "likes_count": 67129,
+      "permalink": "whip-a-tesla-feat-bbno-prod-by-downtime-j-gramm",
+      "permalink_url": "https://soundcloud.com/ygravy/whip-a-tesla-feat-bbno-prod-by-downtime-j-gramm",
+      "playback_count": 5132908,
+      "public": true,
+      "publisher_metadata": {
+        "id": 628649295,
+        "urn": "soundcloud:tracks:628649295",
+        "artist": "Yung Gravy",
+        "album_title": "",
+        "contains_music": true,
+        "publisher": "",
+        "iswc": "",
+        "upc_or_ean": "",
+        "isrc": "USUM71907208",
+        "p_line": "",
+        "p_line_for_display": "℗ ",
+        "writer_composer": "",
+        "release_title": ""
+      },
+      "purchase_title": null,
+      "purchase_url": null,
+      "release_date": null,
+      "reposts_count": 1692,
+      "secret_token": null,
+      "sharing": "public",
+      "state": "finished",
+      "streamable": true,
+      "tag_list": "",
+      "title": "Whip A Tesla (feat. bbno$) [prod. downtime x j gramm]",
+      "track_format": "single-track",
+      "uri": "https://api.soundcloud.com/tracks/628649295",
+      "urn": "soundcloud:tracks:628649295",
+      "user_id": 225521030,
+      "visuals": null,
+      "waveform_url": "https://wave.sndcdn.com/qrrjhQ0M2m1r_m.json",
+      "display_date": "2019-05-31T04:01:07Z",
+      "media": {
+        "transcodings": [
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:628649295/2a6d4d39-410a-447b-b506-cb92bb58120e/stream/hls",
+            "preset": "mp3_0_0",
+            "duration": 153822,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/mpeg"
+            },
+            "quality": "sq"
+          },
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:628649295/700c5fbc-c133-4741-b643-1d63f8584c40/stream/hls",
+            "preset": "opus_0_0",
+            "duration": 153741,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/ogg; codecs=\"opus\""
+            },
+            "quality": "sq"
+          }
+        ]
+      },
+      "monetization_model": "AD_SUPPORTED",
+      "policy": "MONETIZE",
+      "user": {
+        "avatar_url": "https://i1.sndcdn.com/avatars-qs1nOlqSYM43UK47-0I5tNQ-large.jpg",
+        "first_name": "AKA Lil",
+        "full_name": "AKA Lil Steamer",
+        "id": 225521030,
+        "kind": "user",
+        "last_modified": "2020-11-17T08:41:54Z",
+        "last_name": "Steamer",
+        "permalink": "ygravy",
+        "permalink_url": "https://soundcloud.com/ygravy",
+        "uri": "https://api.soundcloud.com/users/225521030",
+        "urn": "soundcloud:users:225521030",
+        "username": "Yung Gravy",
+        "verified": true,
+        "city": "AKA Mr. Butter",
+        "country_code": null,
+        "badges": {
+          "pro": false,
+          "pro_unlimited": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "artwork_url": "https://i1.sndcdn.com/artworks-000464150220-yj1f86-large.jpg",
+      "caption": null,
+      "commentable": true,
+      "comment_count": 311,
+      "created_at": "2018-12-27T18:37:44Z",
+      "description": "SUBSCRIBE INSTAVAMP  \nhttps://www.instagram.com/yungvamp13/?hl=nl",
+      "downloadable": false,
+      "download_count": 0,
+      "duration": 192070,
+      "full_duration": 192070,
+      "embeddable_by": "all",
+      "genre": "TRILL",
+      "has_downloads_left": true,
+      "id": 550705542,
+      "kind": "track",
+      "label_name": null,
+      "last_modified": "2021-01-15T16:08:54Z",
+      "license": "cc-by-nc-sa",
+      "likes_count": 9845,
+      "permalink": "smoking-on-this-wood-got-me-high-in-this-bih",
+      "permalink_url": "https://soundcloud.com/djyungvampire13/smoking-on-this-wood-got-me-high-in-this-bih",
+      "playback_count": 364769,
+      "public": true,
+      "publisher_metadata": {
+        "id": 550705542,
+        "urn": "soundcloud:tracks:550705542",
+        "artist": "DJ YUNG VAMP",
+        "contains_music": true,
+        "isrc": "QM42K1823221",
+        "writer_composer": "Gregory Renard"
+      },
+      "purchase_title": null,
+      "purchase_url": null,
+      "release_date": "2018-12-25T00:00:00Z",
+      "reposts_count": 1062,
+      "secret_token": null,
+      "sharing": "public",
+      "state": "finished",
+      "streamable": true,
+      "tag_list": "DIP LEAN SWAG DRIP \"HIGH IN THIS BITCH \" \"EVIL WAYZ\" \"PURPLE POSSE\" KUSHCADETS \"10K CAASH \"",
+      "title": "SMOKING ON THESE WOODS GOT ME HIGHER THEN A BIH",
+      "track_format": "single-track",
+      "uri": "https://api.soundcloud.com/tracks/550705542",
+      "urn": "soundcloud:tracks:550705542",
+      "user_id": 53293549,
+      "visuals": null,
+      "waveform_url": "https://wave.sndcdn.com/hEgeKKFJy7jU_m.json",
+      "display_date": "2018-12-27T18:37:44Z",
+      "media": {
+        "transcodings": [
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:550705542/218df3b7-1205-41ec-9504-9dd318f8b55c/stream/hls",
+            "preset": "mp3_0_0",
+            "duration": 192070,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/mpeg"
+            },
+            "quality": "sq"
+          },
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:550705542/218df3b7-1205-41ec-9504-9dd318f8b55c/stream/progressive",
+            "preset": "mp3_0_0",
+            "duration": 192070,
+            "snipped": false,
+            "format": {
+              "protocol": "progressive",
+              "mime_type": "audio/mpeg"
+            },
+            "quality": "sq"
+          },
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:550705542/a02d966b-b3c8-4b6b-8065-841184c7f1d1/stream/hls",
+            "preset": "opus_0_0",
+            "duration": 192070,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/ogg; codecs=\"opus\""
+            },
+            "quality": "sq"
+          }
+        ]
+      },
+      "monetization_model": "AD_SUPPORTED",
+      "policy": "MONETIZE",
+      "user": {
+        "avatar_url": "https://i1.sndcdn.com/avatars-000692838104-rkoiut-large.jpg",
+        "first_name": "MORE BLOOD IN MY CUP //",
+        "full_name": "MORE BLOOD IN MY CUP // PURPLE POSSE",
+        "id": 53293549,
+        "kind": "user",
+        "last_modified": "2020-12-16T16:16:03Z",
+        "last_name": "PURPLE POSSE",
+        "permalink": "djyungvampire13",
+        "permalink_url": "https://soundcloud.com/djyungvampire13",
+        "uri": "https://api.soundcloud.com/users/53293549",
+        "urn": "soundcloud:users:53293549",
+        "username": "DJ YUNG VAMP",
+        "verified": true,
+        "city": "BELGIUM / CALI L.A",
+        "country_code": null,
+        "badges": {
+          "pro": true,
+          "pro_unlimited": false,
+          "verified": true
+        }
+      }
+    },
+    {
+      "artwork_url": "https://i1.sndcdn.com/artworks-000430814094-rwccc3-large.jpg",
+      "caption": null,
+      "commentable": true,
+      "comment_count": 44,
+      "created_at": "2018-10-30T03:01:27Z",
+      "description": "another day another dollar",
+      "downloadable": false,
+      "download_count": 0,
+      "duration": 250825,
+      "full_duration": 250825,
+      "embeddable_by": "all",
+      "genre": "",
+      "has_downloads_left": true,
+      "id": 521976051,
+      "kind": "track",
+      "label_name": null,
+      "last_modified": "2021-02-06T03:54:31Z",
+      "license": "all-rights-reserved",
+      "likes_count": 511,
+      "permalink": "love-it-man",
+      "permalink_url": "https://soundcloud.com/abembeats/love-it-man",
+      "playback_count": 18302,
+      "public": true,
+      "publisher_metadata": {
+        "id": 521976051,
+        "urn": "soundcloud:tracks:521976051",
+        "contains_music": true
+      },
+      "purchase_title": null,
+      "purchase_url": null,
+      "release_date": null,
+      "reposts_count": 67,
+      "secret_token": null,
+      "sharing": "public",
+      "state": "finished",
+      "streamable": true,
+      "tag_list": "SUC4LIFE \"DJ DMD\" \"lil keke\" \"fat pat\" SUC \"screwed up\" texx texas \"Hip Hop\" lofi.hiphop",
+      "title": "love it, man",
+      "track_format": "single-track",
+      "uri": "https://api.soundcloud.com/tracks/521976051",
+      "urn": "soundcloud:tracks:521976051",
+      "user_id": 34943670,
+      "visuals": null,
+      "waveform_url": "https://wave.sndcdn.com/mFIETKmSBiYA_m.json",
+      "display_date": "2018-10-30T03:01:27Z",
+      "media": {
+        "transcodings": [
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:521976051/2f8ffae6-d2cc-4ffc-8439-e65224f131fa/stream/hls",
+            "preset": "mp3_standard",
+            "duration": 250825,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/mpeg"
+            },
+            "quality": "sq"
+          },
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:521976051/2f8ffae6-d2cc-4ffc-8439-e65224f131fa/stream/progressive",
+            "preset": "mp3_standard",
+            "duration": 250825,
+            "snipped": false,
+            "format": {
+              "protocol": "progressive",
+              "mime_type": "audio/mpeg"
+            },
+            "quality": "sq"
+          },
+          {
+            "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:521976051/4f3a8563-90c0-48ef-ac53-ff59f36339b4/stream/hls",
+            "preset": "opus_0_0",
+            "duration": 250825,
+            "snipped": false,
+            "format": {
+              "protocol": "hls",
+              "mime_type": "audio/ogg; codecs=\"opus\""
+            },
+            "quality": "sq"
+          }
+        ]
+      },
+      "monetization_model": "NOT_APPLICABLE",
+      "policy": "ALLOW",
+      "user": {
+        "avatar_url": "https://i1.sndcdn.com/avatars-lHyhCP1p29ykcRxb-sFDrmw-large.jpg",
+        "first_name": "Abe M Beats",
+        "full_name": "Abe M Beats",
+        "id": 34943670,
+        "kind": "user",
+        "last_modified": "2020-12-16T21:14:18Z",
+        "last_name": "",
+        "permalink": "abembeats",
+        "permalink_url": "https://soundcloud.com/abembeats",
+        "uri": "https://api.soundcloud.com/users/34943670",
+        "urn": "soundcloud:users:34943670",
+        "username": "Abe M",
+        "verified": true,
+        "city": "Westwood, Los Angeles",
+        "country_code": null,
+        "badges": {
+          "pro": true,
+          "pro_unlimited": false,
+          "verified": true
+        }
+      }
+    },
+    {
+      "id": 509058759,
+      "kind": "track",
+      "monetization_model": "NOT_APPLICABLE",
+      "policy": "ALLOW"
+    },
+    {
+      "id": 174110260,
+      "kind": "track",
+      "monetization_model": "AD_SUPPORTED",
+      "policy": "MONETIZE"
+    },
+    {
+      "id": 581769234,
+      "kind": "track",
+      "monetization_model": "NOT_APPLICABLE",
+      "policy": "ALLOW"
+    },
+    {
+      "id": 473542590,
+      "kind": "track",
+      "monetization_model": "AD_SUPPORTED",
+      "policy": "MONETIZE"
+    },
+    {
+      "id": 518804541,
+      "kind": "track",
+      "monetization_model": "AD_SUPPORTED",
+      "policy": "MONETIZE"
+    },
+    {
+      "id": 490157652,
+      "kind": "track",
+      "monetization_model": "NOT_APPLICABLE",
+      "policy": "ALLOW"
+    },
+    {
+      "id": 600587343,
+      "kind": "track",
+      "monetization_model": "NOT_APPLICABLE",
+      "policy": "ALLOW"
+    },
+    {
+      "id": 678592005,
+      "kind": "track",
+      "monetization_model": "AD_SUPPORTED",
+      "policy": "MONETIZE"
+    },
+    {
+      "id": 671270081,
+      "kind": "track",
+      "monetization_model": "AD_SUPPORTED",
+      "policy": "MONETIZE"
+    }
+  ],
+  "track_count": 14
+}

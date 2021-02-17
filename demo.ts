@@ -27,41 +27,45 @@ const exampleUserID = Number(process.env.EXAMPLE_USER_ID) || 0
 const exampleTrackURL = process.env.EXAMPLE_TRACK_URL || ""
 
 !(async () => {
-  console.log("start")
-  const startTime = Date.now()
+  try {
+    console.log("start")
+    const startTime = Date.now()
 
-  // const out1 = await user.tracks(exampleUserID, { limit: 5 })
-  // const out2 = await out1.next?.()
-  // const out = [...out1.collection, ...(out2?.collection || [])]
+    // const out1 = await user.tracks(exampleUserID, { limit: 5 })
+    // const out2 = await out1.next?.()
+    // const out = [...out1.collection, ...(out2?.collection || [])]
 
-  // const out1 = await user.likes(exampleUserURL, { limit: 5 })
-  // const out2 = await out1.next?.()
-  // const out = [...out1.collection, ...(out2?.collection || [])]
+    // const out1 = await user.likes(exampleUserURL, { limit: 5 })
+    // const out2 = await out1.next?.()
+    // const out = [...out1.collection, ...(out2?.collection || [])]
 
-  // const out = await util.ensureMin(await user.tracks("space-laces", { limit: 10 }), 10)
+    // const out = await util.ensureMin(await user.tracks("space-laces", { limit: 10 }), 10)
 
-  const out = await user.tracks(exampleUserID, { limit: 2 })
-  // const out = await user.likes(exampleUserID, { limit: 2 })
-  // const out = await user(exampleUserID)
-  // const out = await user(exampleUserURL)
-  // const out = await playlist(examplePlaylistURL)
-  // const out = await playlist(examplePlaylistID)
-  // const out = await getClientIDv2()
-  // const out = await resolve(exampleUserURL)
-  // const out = await resolve(exampleTrackURL)
-  // const out = await resolve(examplePlaylistURL)
-  // const out = await resolve.browser(exampleUserURL, client_id)
-  // const out = await resolve.browser(exampleTrackURL, client_id)
-  // const out = await resolve.browser(examplePlaylistURL, client_id)
+    // const out = await user.tracks(exampleUserID, { limit: 2 })
+    // const out = await user.likes(exampleUserID, { limit: 2 })
+    // const out = await user(exampleUserID)
+    // const out = await user(exampleUserURL)
+    // const out = await playlist(examplePlaylistURL)
+    // const out = await playlist(examplePlaylistID)
+    // const out = await getClientIDv2()
+    // const out = await resolve("noisia/deep-down")
+    // const out = await resolve(exampleTrackURL)
+    // const out = await resolve(examplePlaylistURL)
+    const out = await resolve.browser("/noisia/sets/noisia-radio", client_id)
+    // const out = await resolve.browser(exampleTrackURL, client_id)
+    // const out = await resolve.browser(examplePlaylistURL, client_id)
 
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  if ("collection" in out) console.log(`got ${out.collection.length} items in collection`)
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    if ("collection" in out) console.log(`got ${out.collection.length} items in collection`)
 
-  console.log(
-    `fetched ${formatSize(byteLength(out))} of data in ${Date.now() - startTime}ms\n` +
-      `see ${join(__dirname, "demo_out.json")}`
-  )
+    console.log(
+      `fetched ${formatSize(byteLength(out))} of data in ${Date.now() - startTime}ms\n` +
+        `see ${join(__dirname, "demo_out.json")}`
+    )
 
-  writeFileSync("demo_out.json", JSON.stringify(out, null, 2) || "")
+    writeFileSync("demo_out.json", JSON.stringify(out, null, 2) || "")
+  } catch (error) {
+    console.log("demo error", error)
+  }
 })()

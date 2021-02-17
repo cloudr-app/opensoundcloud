@@ -1,0 +1,36 @@
+{
+  "id": 116681,
+  "kind": "user",
+  "permalink": "noisia",
+  "username": "NOISIA",
+  "last_modified": "2021/01/13 12:34:24 +0000",
+  "uri": "https://api.soundcloud.com/users/116681",
+  "permalink_url": "https://soundcloud.com/noisia",
+  "avatar_url": "https://i1.sndcdn.com/avatars-000451809714-n5njwk-large.jpg",
+  "country": null,
+  "first_name": "",
+  "last_name": "",
+  "full_name": "",
+  "description": "Noisia comprise Dutch producers Thijs, Nik and Martijn. Largely regarded as one of the most distinctive, powerful acts to emerge in bass music, their production techniques are referenced and praised across the entire electronic music scene. Their extensive body of work also includes the game Devil May Cry and the Foreign Beggars collaboration I Am Legion.",
+  "city": "",
+  "discogs_name": null,
+  "myspace_name": null,
+  "website": "http://www.noisia.nl",
+  "website_title": "Noisia Website",
+  "track_count": 488,
+  "playlist_count": 67,
+  "online": false,
+  "plan": "Pro Plus",
+  "public_favorites_count": 73,
+  "followers_count": 3954180,
+  "followings_count": 89,
+  "subscriptions": [
+    {
+      "product": {
+        "id": "creator-pro-unlimited",
+        "name": "Pro Unlimited"
+      }
+    }
+  ],
+  "reposts_count": 238
+}

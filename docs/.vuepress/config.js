@@ -35,7 +35,8 @@ module.exports = {
     editLinks: true,
     editLinkText: "edit this page",
     lastUpdated: true,
-    sidebarDepth: 2,
+    // displayAllHeaders: true,
+    sidebar: "auto",
     nav: [
       {
         text: "Guide",
@@ -57,7 +58,8 @@ module.exports = {
       "/api/": [
         {
           collapsable: false,
-          children: [""],
+          sidebarDepth: 2,
+          children: ["", "util", "resolve"],
         },
       ],
     },
@@ -72,6 +74,6 @@ module.exports = {
     ],
     "@vuepress/plugin-back-to-top",
     "@vuepress/plugin-medium-zoom",
-    "vuepress-plugin-smooth-scroll"
+    "vuepress-plugin-smooth-scroll",
   ],
 }
