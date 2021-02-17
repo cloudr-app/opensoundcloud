@@ -119,6 +119,4 @@ const userData = await user("noisia")
   ```
 </details>
 
-<br>
-
 ### [More information](https://opensoundcloud.cloudr.app)
