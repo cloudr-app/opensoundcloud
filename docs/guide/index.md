@@ -34,7 +34,7 @@ or in an environment where CORS is not required is recommended.
 ```ts
 import { user } from "opensoundcloud"
 
-const userData = await user("vaaski")
+const userData = await user("noisia")
 ```
 
 or

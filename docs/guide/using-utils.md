@@ -1,14 +1,14 @@
-# Using utils
+# Utilities
 
 ## Ensure a minimum of returned items
 
-SoundClouds API sometimes behaves unexpected and doesn't return as many items as you'd expect.
-For some users, SoundClouds own webclient will make multiple track requests that don't
+SoundClouds API sometimes behaves unexpected and doesn't return as many items as you'd think.
+For some users, SoundCloud's own webclient will make multiple track requests that don't
 return any items. It'll follow the next_href a couple of times before it finally
-returns tracks. I am not sure why this is, but my guess is that there are deleted- or private
+returns tracks. I am not sure why this is, but my guess is that there are deleted or private
 tracks that wont get included in the response.
 
-To deal with this, you can use the `ensureMin` utility function to ensure that you get a specified
+To deal with this, you can use the [`ensureMin`](/api/util.html#ensuremin) utility function to ensure that you get a specified
 minimum of items returned. It uses paginateNext and recursion to call the API until you have enough tracks.
 
 <<< @/docs/snippets/ensureMin.ts
