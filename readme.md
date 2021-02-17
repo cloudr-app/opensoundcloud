@@ -33,9 +33,9 @@
   </a>
 </p>
 
-<div align="center">
-  <a href="https://opensoundcloud.cloudr.app"><h3>Documentation</h3></a>
-</div>
+<p align="center">
+  <a href="https://opensoundcloud.cloudr.app">Documentation</a>
+</p>
 
 <br>
 
