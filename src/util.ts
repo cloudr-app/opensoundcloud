@@ -55,7 +55,8 @@ export const paginateNext = <K>(url: string, params: Record<string, string | num
     const _params = Object.fromEntries(_url.searchParams.entries())
     const searchParams = { ..._params, ...params }
 
-    const data = (await ky.get(url, { searchParams }).json()) as Record<string, any>
+    const req = await ky.get(url, { searchParams })
+    const data = (await req.json()) as Record<string, any>
 
     const ret: PaginatedResponse<K> = {
       collection: data.collection,

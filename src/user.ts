@@ -28,8 +28,8 @@ const getByID = async (id: number, client_id: ClientIDv2) => {
   const url = urlify(`users/${id}`, APIv2)
   const searchParams = { client_id }
 
-  const data = await ky(url, { searchParams }).json()
-  return data as Userv2
+  const data = await ky(url, { searchParams })
+  return (await data.json()) as Userv2
 }
 
 /**
@@ -82,7 +82,8 @@ user.likes = async (identifier: URLorID, { limit = 50, client_id }: PaginatedOpt
   const url = urlify(`users/${identifier}/likes`, APIv2)
   const searchParams = { client_id, limit }
 
-  const data = (await ky(url, { searchParams }).json()) as UserLikesv2
+  const req = await ky(url, { searchParams })
+  const data = (await req.json()) as UserLikesv2
 
   const ret: PaginatedResponse<UserLikesv2Element[]> = data
   /* istanbul ignore next */
@@ -110,7 +111,8 @@ user.tracks = async (
 
   const searchParams = { client_id, limit }
   const url = urlify(`users/${identifier}/tracks`, APIv2)
-  const data = (await ky(url, { searchParams }).json()) as UserTracksv2
+  const req = await ky(url, { searchParams })
+  const data = (await req.json()) as UserTracksv2
 
   const ret: PaginatedResponse<TrackElement[]> = data
   /* istanbul ignore next */

@@ -28,9 +28,9 @@ resolve.browser = async (url: string, client_id: string): Promise<APIv1Resolve> 
   if (!client_id) throw new Error("APIv1 client_id has to be provided")
 
   const searchParams = { url, client_id }
-  const data = await ky(`${APIv1}/resolve`, { searchParams }).json()
+  const data = await ky(`${APIv1}/resolve`, { searchParams })
 
-  return data as APIv1Resolve
+  return (await data.json()) as APIv1Resolve
 }
 
 export default resolve

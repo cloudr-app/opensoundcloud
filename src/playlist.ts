@@ -13,8 +13,8 @@ const byID = async (id: number, client_id: ClientIDv2) => {
   const url = urlify(`playlists/${id}`, APIv2)
   const searchParams = { client_id }
 
-  const data = await ky(url, { searchParams }).json()
-  return data as Playlistv2
+  const data = await ky(url, { searchParams })
+  return (await data.json()) as Playlistv2
 }
 
 /**
