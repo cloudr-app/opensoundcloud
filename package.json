@@ -17,7 +17,9 @@
     "test": "nyc --reporter=lcov ava",
     "commit": "git cz -S",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test"
+    "prepublishOnly": "npm test",
+    "docs:dev": "vuepress dev -p 8088 docs --temp docs.temp",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -40,6 +42,7 @@
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
+    "@vuepress/plugin-pwa": "^1.8.1",
     "ava": "^3.15.0",
     "commitizen": "4.2.2",
     "dotenv": "^8.2.0",
@@ -52,7 +55,9 @@
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "vuepress": "^1.8.1",
+    "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
   },
   "ava": {
     "extensions": [
