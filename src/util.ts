@@ -31,7 +31,7 @@ export const ScrapeIDs = {
 }
 
 const scriptReg = /<script(?: crossorigin)? src="(https:\/\/a-v2\.sndcdn\.com\/assets\/.+\.js)"/gm
-const clientIDReg = /client_id=(\w+)/
+const clientIDReg = /client_id=(\w{32})/
 export const getClientIDv2 = async (): Promise<string> => {
   const html = await ky(scrapeURL).text()
   const scriptURLs = Array.from(html.matchAll(scriptReg), (m: string[]) => m[1])
