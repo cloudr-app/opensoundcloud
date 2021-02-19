@@ -10,6 +10,7 @@ import type {
 import ky from "ky-universal"
 import {
   APIv2,
+  defaultLimit,
   getClientIDv2,
   PaginatedResponse,
   paginateNext,
@@ -104,7 +105,7 @@ user.likes = async (identifier: URLorID, { limit = 50, client_id }: PaginatedOpt
  */
 user.tracks = async (
   identifier: URLorID,
-  { limit = 50, client_id }: PaginatedOptions = {}
+  { limit = defaultLimit, client_id }: PaginatedOptions = {}
 ) => {
   if (typeof identifier === "string") identifier = (await resolve(identifier)).id
   if (!client_id) client_id = await getClientIDv2()
