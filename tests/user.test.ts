@@ -1,7 +1,6 @@
 import test from "ava"
 
-import { user } from "../src"
-import { getClientIDv2 } from "../src/util"
+import { user, util } from "../src"
 
 const exampleUserURL = process.env.EXAMPLE_USER_URL || ""
 const exampleUserID = Number(process.env.EXAMPLE_USER_ID) || 0
@@ -9,7 +8,7 @@ const exampleUserID = Number(process.env.EXAMPLE_USER_ID) || 0
 let client_id: string
 
 test.before(async () => {
-  client_id = await getClientIDv2()
+  client_id = await util.getClientIDv2()
 })
 
 test("get user using URL", async t => {

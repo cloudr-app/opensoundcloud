@@ -1,7 +1,6 @@
 import test from "ava"
 
-import { playlist } from "../src"
-import { getClientIDv2 } from "../src/util"
+import { playlist, util } from "../src"
 
 const examplePlaylistURL = process.env.EXAMPLE_PLAYLIST_URL || ""
 const examplePlaylistID = Number(process.env.EXAMPLE_PLAYLIST_ID) || 0
@@ -9,7 +8,7 @@ const examplePlaylistID = Number(process.env.EXAMPLE_PLAYLIST_ID) || 0
 let client_id2: string
 
 test.before(async () => {
-  client_id2 = await getClientIDv2()
+  client_id2 = await util.getClientIDv2()
 })
 
 test("get playlist using URL", async t => {
