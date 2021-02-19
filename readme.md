@@ -57,6 +57,7 @@ const userData = await user("noisia")
 
 <details>
   <summary>userData</summary>
+
   ```json
   {
     "avatar_url": "https://i1.sndcdn.com/avatars-000451809714-n5njwk-large.jpg",
