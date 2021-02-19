@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { playlist, resolve, user, util } from "./src"
+import { playlist, resolve, user, util, search } from "./src"
 import { writeFileSync } from "fs"
 import { getClientIDv2 } from "./src/util"
 import { join } from "path"
@@ -25,11 +25,18 @@ const examplePlaylistID = Number(process.env.EXAMPLE_PLAYLIST_ID) || 0
 const exampleUserURL = process.env.EXAMPLE_USER_URL || ""
 const exampleUserID = Number(process.env.EXAMPLE_USER_ID) || 0
 const exampleTrackURL = process.env.EXAMPLE_TRACK_URL || ""
+const exampleSearchTerm = "noisia"
 
 !(async () => {
   try {
     console.log("start")
     const startTime = Date.now()
+
+    // const out1 = await search(exampleSearchTerm, { limit: 2 })
+    // const out2 = await out1.next?.()
+    // const out = [...out1.collection, ...(out2?.collection || [])]
+
+    // const out = await util.ensureMin(await search(exampleSearchTerm, { limit: 1 }), 10)
 
     // const out1 = await user.tracks(exampleUserID, { limit: 5 })
     // const out2 = await out1.next?.()
@@ -41,6 +48,10 @@ const exampleTrackURL = process.env.EXAMPLE_TRACK_URL || ""
 
     // const out = await util.ensureMin(await user.tracks("space-laces", { limit: 10 }), 10)
 
+    const out = await search(exampleSearchTerm)
+    // const out = await search.users(exampleSearchTerm)
+    // const out = await search.albums(exampleSearchTerm)
+    // const out = await search.playlists(exampleSearchTerm)
     // const out = await user.tracks(exampleUserID, { limit: 2 })
     // const out = await user.likes(exampleUserID, { limit: 2 })
     // const out = await user(exampleUserID)
@@ -48,10 +59,10 @@ const exampleTrackURL = process.env.EXAMPLE_TRACK_URL || ""
     // const out = await playlist(examplePlaylistURL)
     // const out = await playlist(examplePlaylistID)
     // const out = await getClientIDv2()
-    // const out = await resolve("noisia/deep-down")
+    // const out = await resolve(exampleUserURL)
     // const out = await resolve(exampleTrackURL)
     // const out = await resolve(examplePlaylistURL)
-    const out = await resolve.browser("/noisia/sets/noisia-radio", client_id)
+    // const out = await resolve.browser(exampleUserURL, client_id)
     // const out = await resolve.browser(exampleTrackURL, client_id)
     // const out = await resolve.browser(examplePlaylistURL, client_id)
 
