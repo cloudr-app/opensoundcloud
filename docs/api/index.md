@@ -39,8 +39,8 @@
 
 - **Arguments**:
 
-  - `{string | number} URL, URL path or ID`
-  - `{Object} [options]`
+  - identifier: `{string | number} URL, URL path or ID`
+  - options?: `{Object}`
     - `{number} [limit] Limit the amount of tracks returned. Defaults to 50.`
     - `{string} [client_id] client_id for APIv2`
 
@@ -75,8 +75,8 @@
 
 - **Arguments**:
 
-  - `{string | number} URL, URL path or ID`
-  - `{Object} [options]`
+  - identifier: `{string | number} URL, URL path or ID`
+  - options?: `{Object}`
     - `{number} [limit] Limit the amount of likes returned. Defaults to 50.`
     - `{string} [client_id] client_id for APIv2`
 
@@ -143,8 +143,8 @@
 
 - **Arguments**:
 
-  - `{string} query`
-  - `{Object} [options]`
+  - query: `{string}`
+  - options?: `{Object}`
     - `{number} [limit] Limit the amount of items returned. Defaults to 20.`
     - `{string} [client_id] client_id for APIv2`
 
