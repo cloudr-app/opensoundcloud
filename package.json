@@ -18,7 +18,7 @@
     "commit": "git cz -S",
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
-    "docs:dev": "vuepress dev -p 8088 docs --temp docs.temp",
+    "docs:dev": "vuepress dev -p 8088 docs --temp docs/.temp",
     "docs:build": "vuepress build docs",
     "docs:deploy": "netlify build && netlify deploy"
   },

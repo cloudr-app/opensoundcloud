@@ -66,7 +66,4 @@ search.tracks = searchFactory("search/tracks")
 search.albums = searchFactory("search/albums")
 search.playlists = searchFactory("search/playlists_without_albums")
 
-// TODO write jsdoc
-// TODO write docs
-
 export default search

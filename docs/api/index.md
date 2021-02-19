@@ -138,3 +138,108 @@
   console.log(playlist.id) //> 620756469
   console.log(playlist.tracks) //> Array<Track>
   ```
+
+## search
+
+- **Arguments**:
+
+  - `{string} query`
+  - `{Object} [options]`
+    - `{number} [limit] Limit the amount of items returned. Defaults to 20.`
+    - `{string} [client_id] client_id for APIv2`
+
+- **Returns**: `Promise<PaginatedResponse<SearchResult[]>>`
+  ::: details example search response Object
+
+  <<< @/docs/snippets/search.json
+
+  :::
+
+- **Usage**:
+  Search tracks, users and playlists.
+
+  It's recommended to supply a `client_id` (for APIv2) to save on one request which would resolve one for you.
+
+  Use [`util.getClientIDv2`](/api/util.html#getclientidv2) to get a `client_id` for APIv2.
+
+- **Example**:
+
+  ```ts
+  import { search } from "opensoundcloud"
+
+  const searchResult = await search("noisia")
+
+  console.log(searchResult.collection) //> SearchResult[]
+  ```
+
+---
+
+### tracks
+
+- **Arguments**: [Same as regular search](#search)
+- **Returns**: [Same as regular search](#search) but only containing items with `kind: tracks`
+- **Usage**: [Same as regular search](#search)
+
+- **Example**:
+
+  ```ts
+  import { search } from "opensoundcloud"
+
+  const searchResult = await search.tracks("noisia")
+
+  console.log(searchResult.collection) //> SearchResult[]
+  ```
+
+---
+
+### playlists
+
+- **Arguments**: [Same as regular search](#search)
+- **Returns**: [Same as regular search](#search) but only containing items with `kind: playlists`
+- **Usage**: [Same as regular search](#search)
+
+- **Example**:
+
+  ```ts
+  import { search } from "opensoundcloud"
+
+  const searchResult = await search.playlists("noisia")
+
+  console.log(searchResult.collection) //> SearchResult[]
+  ```
+
+---
+
+### users
+
+- **Arguments**: [Same as regular search](#search)
+- **Returns**: [Same as regular search](#search) but only containing items with `kind: users`
+- **Usage**: [Same as regular search](#search)
+
+- **Example**:
+
+  ```ts
+  import { search } from "opensoundcloud"
+
+  const searchResult = await search.users("noisia")
+
+  console.log(searchResult.collection) //> SearchResult[]
+  ```
+
+---
+
+### albums
+
+- **Arguments**: [Same as regular search](#search)
+- **Returns**: [Same as regular search](#search) but only containing items with `kind: albums`
+- **Usage**: [Same as regular search](#search)
+
+- **Example**:
+
+  ```ts
+  import { search } from "opensoundcloud"
+
+  const searchResult = await search.albums("noisia")
+
+  console.log(searchResult.collection) //> SearchResult[]
+  ```

@@ -13,10 +13,14 @@ minimum of items returned. It uses paginateNext and recursion to call the API un
 
 <<< @/docs/snippets/ensureMin.ts
 
+[More info in the API section](/api/util.html#ensuremin)
+
 
 ## Get a client_id for APIv2
 
 Scrapes a client_id for APIv2 by going through the included scripts on soundcloud.com until it finds a client_id.
+
+[More info in the API section](/api/util.html#getclientidv2)
 
 ## Pagination
 

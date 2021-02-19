@@ -48,7 +48,7 @@ const exampleSearchTerm = "noisia"
 
     // const out = await util.ensureMin(await user.tracks("space-laces", { limit: 10 }), 10)
 
-    const out = await search(exampleSearchTerm)
+    const out = await search(exampleSearchTerm, { limit: 2 })
     // const out = await search.users(exampleSearchTerm)
     // const out = await search.albums(exampleSearchTerm)
     // const out = await search.playlists(exampleSearchTerm)
