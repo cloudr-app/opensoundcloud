@@ -41,8 +41,8 @@
 
   - identifier: `{string | number} URL, URL path or ID`
   - options?: `{Object}`
-    - `{number} [limit] Limit the amount of tracks returned. Defaults to 50.`
-    - `{string} [client_id] client_id for APIv2`
+    - limit?: `{number} Limit the amount of tracks returned. Defaults to 50.`
+    - client_id?: `{string} client_id for APIv2`
 
 - **Returns**: `Promise<PaginatedResponse<TrackElement[]>>`
   ::: details example tracks Object
@@ -77,8 +77,8 @@
 
   - identifier: `{string | number} URL, URL path or ID`
   - options?: `{Object}`
-    - `{number} [limit] Limit the amount of likes returned. Defaults to 50.`
-    - `{string} [client_id] client_id for APIv2`
+    - limit?: `{number} Limit the amount of likes returned. Defaults to 50.`
+    - client_id?: `{string} client_id for APIv2`
 
 - **Returns**: `Promise<PaginatedResponse<UserLikesv2Element[]>>`
   ::: details example likes Object
@@ -145,8 +145,8 @@
 
   - query: `{string}`
   - options?: `{Object}`
-    - `{number} [limit] Limit the amount of items returned. Defaults to 20.`
-    - `{string} [client_id] client_id for APIv2`
+    - limit?: `{number} Limit the amount of items returned. Defaults to 20.`
+    - client_id?: `{string} client_id for APIv2`
 
 - **Returns**: `Promise<PaginatedResponse<SearchResult[]>>`
   ::: details example search response Object
