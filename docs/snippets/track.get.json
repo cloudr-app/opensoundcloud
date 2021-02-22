@@ -1,0 +1,119 @@
+{
+  "artwork_url": "https://i1.sndcdn.com/artworks-Yo3mH7MYaXkR-0-large.png",
+  "caption": null,
+  "commentable": true,
+  "comment_count": 5,
+  "created_at": "2017-03-20T16:24:44Z",
+  "description": null,
+  "downloadable": false,
+  "download_count": 0,
+  "duration": 191129,
+  "full_duration": 191129,
+  "embeddable_by": "all",
+  "genre": "Electronic",
+  "has_downloads_left": true,
+  "id": 313447871,
+  "kind": "track",
+  "label_name": "Vision Recordings",
+  "last_modified": "2018-11-12T16:06:05Z",
+  "license": "all-rights-reserved",
+  "likes_count": 596,
+  "permalink": "tentacles-1",
+  "permalink_url": "https://soundcloud.com/noisia/tentacles-1",
+  "playback_count": 16506,
+  "public": true,
+  "publisher_metadata": {
+    "id": 313447871,
+    "urn": "soundcloud:tracks:313447871",
+    "artist": "Noisia",
+    "album_title": "Outer Edges",
+    "contains_music": true,
+    "upc_or_ean": "5060448297771",
+    "isrc": "NLCK41032641",
+    "explicit": false,
+    "p_line": "2016 Vision Recordings",
+    "p_line_for_display": "℗ 2016 Vision Recordings",
+    "c_line": "2016 Vision Recordings",
+    "c_line_for_display": "© 2016 Vision Recordings",
+    "release_title": "Tentacles"
+  },
+  "purchase_title": null,
+  "purchase_url": null,
+  "release_date": "2016-08-05T00:00:00Z",
+  "reposts_count": 34,
+  "secret_token": null,
+  "sharing": "public",
+  "state": "finished",
+  "streamable": true,
+  "tag_list": "\"Drum & Bass\"",
+  "title": "Tentacles",
+  "track_format": "single-track",
+  "uri": "https://api.soundcloud.com/tracks/313447871",
+  "urn": "soundcloud:tracks:313447871",
+  "user_id": 116681,
+  "visuals": null,
+  "waveform_url": "https://wave.sndcdn.com/q1WquQVdelm3_m.json",
+  "display_date": "2016-08-05T00:00:00Z",
+  "media": {
+    "transcodings": [
+      {
+        "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:313447871/c8579861-49ae-4e7e-9318-d52f10fee4fb/stream/hls",
+        "preset": "mp3_standard",
+        "duration": 191129,
+        "snipped": false,
+        "format": {
+          "protocol": "hls",
+          "mime_type": "audio/mpeg"
+        },
+        "quality": "sq"
+      },
+      {
+        "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:313447871/c8579861-49ae-4e7e-9318-d52f10fee4fb/stream/progressive",
+        "preset": "mp3_standard",
+        "duration": 191129,
+        "snipped": false,
+        "format": {
+          "protocol": "progressive",
+          "mime_type": "audio/mpeg"
+        },
+        "quality": "sq"
+      },
+      {
+        "url": "https://api-v2.soundcloud.com/media/soundcloud:tracks:313447871/87a679d9-9245-40e0-a21f-9c042a267861/stream/hls",
+        "preset": "opus_0_0",
+        "duration": 191129,
+        "snipped": false,
+        "format": {
+          "protocol": "hls",
+          "mime_type": "audio/ogg; codecs=\"opus\""
+        },
+        "quality": "sq"
+      }
+    ]
+  },
+  "monetization_model": "AD_SUPPORTED",
+  "policy": "MONETIZE",
+  "user": {
+    "avatar_url": "https://i1.sndcdn.com/avatars-000451809714-n5njwk-large.jpg",
+    "first_name": "",
+    "followers_count": 3954040,
+    "full_name": "",
+    "id": 116681,
+    "kind": "user",
+    "last_modified": "2021-01-13T12:34:24Z",
+    "last_name": "",
+    "permalink": "noisia",
+    "permalink_url": "https://soundcloud.com/noisia",
+    "uri": "https://api.soundcloud.com/users/116681",
+    "urn": "soundcloud:users:116681",
+    "username": "NOISIA",
+    "verified": true,
+    "city": "",
+    "country_code": null,
+    "badges": {
+      "pro": false,
+      "pro_unlimited": true,
+      "verified": true
+    }
+  }
+}

@@ -1,11 +1,44 @@
 # Entities
 
+## track
+
+- **Arguments**:
+
+  - identifier: `{string | number}` URL, URL path or ID
+  - client_id?: `{string}` client_id for APIv2
+
+- **Returns**: `Promise<Trackv2>`
+  ::: details example track Object
+
+  <<< @/docs/snippets/track.get.json
+
+  :::
+
+- **Usage**:
+  Request info about a track by either SoundCloud URL or ID.
+  If you use a string as identifier it resolves the data via scraping.
+
+  If you use a number (user ID) it calls the APIv2 directly. In that case it's recommended
+  to supply a `client_id` for APIv2 to save on one request which would resolve one for you.
+
+  Use [`util.getClientIDv2`](/api/util.html#getclientidv2) to get a `client_id` for APIv2.
+
+- **Example**:
+
+  ```ts
+  import { user } from "opensoundcloud"
+
+  const track = await track("noisia/tentacles-1")
+
+  console.log(track.id) //> 313447871
+  ```
+
 ## user
 
 - **Arguments**:
 
-  - identifier: `{string | number} URL, URL path or ID`
-  - client_id?: `{string} [client_id for APIv2]`
+  - identifier: `{string | number}` URL, URL path or ID
+  - client_id?: `{string}` client_id for APIv2
 
 - **Returns**: `Promise<Userv2>`
   ::: details example user Object
@@ -39,10 +72,10 @@
 
 - **Arguments**:
 
-  - identifier: `{string | number} URL, URL path or ID`
+  - identifier: `{string | number}` URL, URL path or ID
   - options?: `{Object}`
-    - limit?: `{number} Limit the amount of tracks returned. Defaults to 50.`
-    - client_id?: `{string} client_id for APIv2`
+    - limit?: `{number}` Limit the amount of tracks returned. Defaults to 20.
+    - client_id?: `{string}` client_id for APIv2
 
 - **Returns**: `Promise<PaginatedResponse<TrackElement[]>>`
   ::: details example tracks Object
@@ -75,10 +108,10 @@
 
 - **Arguments**:
 
-  - identifier: `{string | number} URL, URL path or ID`
+  - identifier: `{string | number}` URL, URL path or ID
   - options?: `{Object}`
-    - limit?: `{number} Limit the amount of likes returned. Defaults to 50.`
-    - client_id?: `{string} client_id for APIv2`
+    - limit?: `{number}` Limit the amount of tracks returned. Defaults to 20.
+    - client_id?: `{string}` client_id for APIv2
 
 - **Returns**: `Promise<PaginatedResponse<UserLikesv2Element[]>>`
   ::: details example likes Object
@@ -109,8 +142,8 @@
 
 - **Arguments**:
 
-  - identifier: `{string | number} URL, URL path or ID`
-  - client_id?: `{string} [client_id] client_id for APIv2`
+  - identifier: `{string | number}` URL, URL path or ID
+  - client_id?: `{string}` client_id for APIv2
 
 - **Returns**: `Promise<Playlistv2>`
   ::: details example playlist Object
@@ -145,8 +178,8 @@
 
   - query: `{string}`
   - options?: `{Object}`
-    - limit?: `{number} Limit the amount of items returned. Defaults to 20.`
-    - client_id?: `{string} client_id for APIv2`
+    - limit?: `{number}` Limit the amount of tracks returned. Defaults to 20.
+    - client_id?: `{string}` client_id for APIv2
 
 - **Returns**: `Promise<PaginatedResponse<SearchResult[]>>`
   ::: details example search response Object

@@ -1,6 +1,6 @@
 // generated with https://app.quicktype.io?share=9Fd3zZTCel75c1MlXFjU
 
-export interface Track {
+export interface Trackv2 {
   artwork_url: null | string
   caption: null
   commentable: boolean

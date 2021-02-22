@@ -1,4 +1,4 @@
-import type { Track } from "../types/track"
+import type { Trackv2 } from "../types/track"
 import type { ClientIDv2, URLorID } from "../types"
 
 import ky from "ky-universal"
@@ -9,12 +9,12 @@ import { APIv2, getClientIDv2, scrapeData, ScrapeIDs, urlify } from "./util"
  * @param id A track ID
  * @param client_id client_id for APIv2
  */
-const getByID = async (id: number, client_id: ClientIDv2): Promise<Track> => {
+const getByID = async (id: number, client_id: ClientIDv2): Promise<Trackv2> => {
   const url = urlify(`tracks/${id}`, APIv2)
   const searchParams = { client_id }
 
   const data = await ky(url, { searchParams })
-  return (await data.json()) as Track
+  return (await data.json()) as Trackv2
 }
 
 /**
@@ -27,7 +27,7 @@ const getByURL = async (url: string) => {
   if (!trackData) throw new Error("No track data found.")
 
   const [data] = trackData.data
-  return data as Track
+  return data as Trackv2
 }
 
 /**
@@ -38,7 +38,7 @@ const getByURL = async (url: string) => {
  * @param identifier A track URL or ID
  * @param client_id Optional client_id for APIv2.
  */
-const track = async (identifier: URLorID, client_id?: ClientIDv2): Promise<Track> => {
+const track = async (identifier: URLorID, client_id?: ClientIDv2): Promise<Trackv2> => {
   if (typeof identifier === "string") return await getByURL(identifier)
 
   if (typeof identifier === "number") {
