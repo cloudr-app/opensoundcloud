@@ -27,6 +27,49 @@ module.exports = {
     ["meta", { name: "msapplication-config", content: "/icons/browserconfig.xml" }],
     ["meta", { name: "theme-color", content: "#282c34" }],
     ["meta", { name: "viewport", content: "width=device-width, initial-scale=1" }],
+    [
+      "meta",
+      {
+        property: "og:title",
+        content: "opensoundcloud documentation",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:description",
+        content:
+          "A thin SoundCloud API, APIv2 and web-scrape wrapper written in TypeScript with 100% test coverage.",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:image",
+        content: "https://opensoundcloud.cloudr.app/icons/og-image.png",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:url",
+        content: "https://opensoundcloud.cloudr.app",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:site_name",
+        content: "opensoundcloud",
+      },
+    ],
   ],
   themeConfig: {
     prefersTheme: "dark",
