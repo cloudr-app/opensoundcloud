@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { playlist, resolve, user, util, search } from "./src"
+import { playlist, resolve, user, util, search, track } from "./src"
 import { writeFileSync } from "fs"
 import { getClientIDv2 } from "./src/util"
 import { join } from "path"
@@ -25,6 +25,7 @@ const examplePlaylistID = Number(process.env.EXAMPLE_PLAYLIST_ID) || 0
 const exampleUserURL = process.env.EXAMPLE_USER_URL || ""
 const exampleUserID = Number(process.env.EXAMPLE_USER_ID) || 0
 const exampleTrackURL = process.env.EXAMPLE_TRACK_URL || ""
+const exampleTrackID = Number(process.env.EXAMPLE_TRACK_ID) || 0
 const exampleSearchTerm = "noisia"
 
 !(async () => {
@@ -48,7 +49,9 @@ const exampleSearchTerm = "noisia"
 
     // const out = await util.ensureMin(await user.tracks("space-laces", { limit: 10 }), 10)
 
-    const out = await search(exampleSearchTerm, { limit: 2 })
+    const out = await track(exampleTrackID)
+    // const out = await track(exampleTrackURL)
+    // const out = await search(exampleSearchTerm, { limit: 2 })
     // const out = await search.users(exampleSearchTerm)
     // const out = await search.albums(exampleSearchTerm)
     // const out = await search.playlists(exampleSearchTerm)

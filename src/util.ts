@@ -28,6 +28,7 @@ export const scrapeData = async (url: string): Promise<ScrapedData> => {
 export const ScrapeIDs = {
   user: 30,
   playlist: 45,
+  trackWithTranscodings: 18,
 }
 
 const scriptReg = /<script(?: crossorigin)? src="(https:\/\/a-v2\.sndcdn\.com\/assets\/.+\.js)"/gm

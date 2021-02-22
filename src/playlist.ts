@@ -33,7 +33,7 @@ const byURL = async (url: string) => {
 /**
  * Get a playlist by either URL or ID using the APIv2.
  *
- * If you use a playlist ID, You can provide a v2 client_id to save one scrape request (recommended).
+ * If you use a playlist ID, you can provide a v2 client_id to save one scrape request (recommended).
  * Uses `util.getClientIDv2` to find a client_id if none is provided.
  * @param identifier A playlist URL or ID
  * @param client_id Optional client_id for APIv2.

@@ -15,7 +15,7 @@
     "demo": "ts-node -r dotenv/config ./demo.ts",
     "build": "rimraf lib && tsc",
     "test": "nyc ava",
-    "coverage": "live-server coverage/lcov-report",
+    "coverage": "live-server --port=8069 coverage/lcov-report",
     "commit": "git cz -S",
     "prepare": "npm run build",
     "prepublishOnly": "pinst --disable && npm test",
