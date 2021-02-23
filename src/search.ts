@@ -1,7 +1,7 @@
 import type { PaginatedOptions } from "../types"
 import type { Search, SearchResult } from "../types/search"
 
-import ky from "ky-universal"
+import got from "got"
 import {
   APIv2,
   defaultLimit,
@@ -23,8 +23,7 @@ const searchFactory = (urlPath: string) => async (
     limit,
     q: query,
   }
-  const req = await ky(url, { searchParams })
-  const data = (await req.json()) as Search
+  const data = await got(url, { searchParams }).json<Search>()
 
   const ret: PaginatedResponse<SearchResult[]> = data
 

@@ -1,6 +1,6 @@
 import type { ScrapedData } from "../types/scrape"
 
-import ky from "ky-universal"
+import got from "got"
 
 export const issueURL = "https://github.com/cloudr-app/opensoundcloud/issues/new"
 
@@ -18,7 +18,7 @@ export const at = <T>(arr: Array<T>, pos: number): T => {
 
 const htmlDataReg = /(\[{"id")(.*?)(?=\);)/i
 export const scrapeData = async (url: string): Promise<ScrapedData> => {
-  const html = await ky(url).text()
+  const html = await got(url).text()
   const [match] = html.match(htmlDataReg) || []
 
   return JSON.parse(match) as ScrapedData
@@ -33,11 +33,11 @@ export const ScrapeIDs = {
 const scriptReg = /<script(?: crossorigin)? src="(https:\/\/a-v2\.sndcdn\.com\/assets\/.+\.js)"/gm
 const clientIDReg = /client_id=(\w{32})/
 export const getClientIDv2 = async (): Promise<string> => {
-  const html = await ky(scrapeURL).text()
+  const html = await got(scrapeURL).text()
   const scriptURLs = Array.from(html.matchAll(scriptReg), (m: string[]) => m[1])
 
   for (const url of scriptURLs) {
-    const script = await ky(url).text()
+    const script = await got(url).text()
     const match = script.match(clientIDReg)
     if (match?.[1]) return match[1]
   }
@@ -56,8 +56,7 @@ export const paginateNext = <K>(url: string, params: Record<string, string | num
     const _params = Object.fromEntries(_url.searchParams.entries())
     const searchParams = { ..._params, ...params }
 
-    const req = await ky.get(url, { searchParams })
-    const data = (await req.json()) as Record<string, any>
+    const data = await got.get(url, { searchParams }).json<Record<string, any>>()
 
     const ret: PaginatedResponse<K> = {
       collection: data.collection,

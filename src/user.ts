@@ -7,7 +7,8 @@ import type {
   UserTracksv2,
 } from "../types/user"
 
-import ky from "ky-universal"
+import got from "got"
+import resolve from "./resolve"
 import {
   APIv2,
   defaultLimit,
@@ -18,7 +19,6 @@ import {
   ScrapeIDs,
   urlify,
 } from "./util"
-import resolve from "./resolve"
 
 /**
  * Get a user by ID using the APIv2
@@ -29,8 +29,7 @@ const getByID = async (id: number, client_id: ClientIDv2) => {
   const url = urlify(`users/${id}`, APIv2)
   const searchParams = { client_id }
 
-  const data = await ky(url, { searchParams })
-  return (await data.json()) as Userv2
+  return await got(url, { searchParams }).json<Userv2>()
 }
 
 /**
@@ -83,8 +82,7 @@ user.likes = async (identifier: URLorID, { limit = 50, client_id }: PaginatedOpt
   const url = urlify(`users/${identifier}/likes`, APIv2)
   const searchParams = { client_id, limit }
 
-  const req = await ky(url, { searchParams })
-  const data = (await req.json()) as UserLikesv2
+  const data = await got(url, { searchParams }).json<UserLikesv2>()
 
   const ret: PaginatedResponse<UserLikesv2Element[]> = data
   /* istanbul ignore next */
@@ -112,8 +110,7 @@ user.tracks = async (
 
   const searchParams = { client_id, limit }
   const url = urlify(`users/${identifier}/tracks`, APIv2)
-  const req = await ky(url, { searchParams })
-  const data = (await req.json()) as UserTracksv2
+  const data = await got(url, { searchParams }).json<UserTracksv2>()
 
   const ret: PaginatedResponse<TrackElement[]> = data
   /* istanbul ignore next */

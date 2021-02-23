@@ -39,8 +39,7 @@
   "author": "vaaski <admin@vaa.ski>",
   "license": "MIT",
   "dependencies": {
-    "ky": "^0.17.0",
-    "ky-universal": "^0.8.2"
+    "got": "^11.8.1"
   },
   "devDependencies": {
     "@types/node": "^12.11.1",

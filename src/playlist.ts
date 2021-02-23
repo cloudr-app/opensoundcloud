@@ -1,7 +1,7 @@
 import type { ClientIDv2, URLorID } from "../types"
 import type { Playlistv2 } from "../types/playlist"
 
-import ky from "ky-universal"
+import got from "got"
 import { APIv2, getClientIDv2, scrapeData, ScrapeIDs, urlify } from "./util"
 
 /**
@@ -13,8 +13,7 @@ const byID = async (id: number, client_id: ClientIDv2) => {
   const url = urlify(`playlists/${id}`, APIv2)
   const searchParams = { client_id }
 
-  const data = await ky(url, { searchParams })
-  return (await data.json()) as Playlistv2
+  return await got(url, { searchParams }).json<Playlistv2>()
 }
 
 /**

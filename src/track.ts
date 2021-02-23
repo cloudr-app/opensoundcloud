@@ -1,7 +1,7 @@
 import type { Trackv2 } from "../types/track"
 import type { ClientIDv2, URLorID } from "../types"
 
-import ky from "ky-universal"
+import got from "got"
 import { APIv2, getClientIDv2, scrapeData, ScrapeIDs, urlify } from "./util"
 
 /**
@@ -13,8 +13,7 @@ const getByID = async (id: number, client_id: ClientIDv2): Promise<Trackv2> => {
   const url = urlify(`tracks/${id}`, APIv2)
   const searchParams = { client_id }
 
-  const data = await ky(url, { searchParams })
-  return (await data.json()) as Trackv2
+  return await got(url, { searchParams }).json<Trackv2>()
 }
 
 /**
