@@ -71,6 +71,7 @@
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
   },
   "ava": {
+    "failFast": true,
     "extensions": [
       "ts"
     ],

@@ -52,6 +52,4 @@ const playlist = async (identifier: URLorID, client_id?: ClientIDv2): Promise<Pl
 playlist.id = byID
 playlist.url = byURL
 
-// TODO browser equivalents with pagination
-
 export default playlist

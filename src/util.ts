@@ -5,7 +5,6 @@ import ky from "ky-universal"
 export const issueURL = "https://github.com/cloudr-app/opensoundcloud/issues/new"
 
 export const scrapeURL = "https://soundcloud.com"
-export const APIv1 = "https://api.soundcloud.com"
 export const APIv2 = "https://api-v2.soundcloud.com"
 export const defaultLimit = 20
 export const urlify = (url: string, base = scrapeURL): string => {

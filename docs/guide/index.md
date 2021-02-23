@@ -22,12 +22,11 @@ Install into your project:
 
 ## Usage info
 
-Opensoundcloud works in both Node.js and the browser,
-but since CORS is not enabled for the APIv2 nor for web-scraping,
-you can only use methods that end in `.browser` in the browser.
+Opensoundcloud only works in Node.js, because CORS is neither
+enabled for the APIv2 nor for web-scraping.
 
 Therefore, using opensoundcloud on the server
-or in an environment where CORS is not required is recommended.
+or in an environment where CORS is required.
 
 ## Basic example
 

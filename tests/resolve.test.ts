@@ -30,27 +30,3 @@ test("resolve track", async t => {
 test("resolve user using invalid URL", async t => {
   await t.throwsAsync(resolve("https://vaaski.dev"))
 })
-
-test("resolve.browser user", async t => {
-  const data = await resolve.browser(exampleUserURL, client_id)
-  t.is(data.kind, "user")
-  t.truthy(data.username)
-  t.truthy(data.id)
-})
-
-test("resolve.browser playlist", async t => {
-  const data = await resolve.browser(examplePlaylistURL, client_id)
-  t.is(data.kind, "playlist")
-  t.truthy(data.id)
-})
-
-test("resolve.browser track", async t => {
-  const data = await resolve.browser(exampleTrackURL, client_id)
-  t.is(data.kind, "track")
-  t.truthy(data.id)
-})
-
-test("resolve.browser user throws without client_id", async t => {
-  // @ts-expect-error intentionally without client_id
-  await t.throwsAsync(resolve.browser(exampleUserURL))
-})
