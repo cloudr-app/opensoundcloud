@@ -7,7 +7,7 @@
 </div>
 
 <div align="center">
-  <h3>A thin wrapper around SoundCloud's APIv1 and APIv2.</h3>
+  <h3>A thin wrapper around SoundCloud's APIv1 and APIv2 for Node.js.</h3>
 </div>
 
 ---
@@ -120,4 +120,4 @@ const userData = await user("noisia")
   ```
 </details>
 
-### [More information](https://opensoundcloud.cloudr.app)
+### [Full API documentation and getting started guide on opensoundcloud.cloudr.app](https://opensoundcloud.cloudr.app)
