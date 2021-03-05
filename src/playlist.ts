@@ -2,7 +2,7 @@ import type { ClientIDv2, URLorID } from "../types"
 import type { Playlistv2 } from "../types/playlist"
 
 import got from "got"
-import { APIv2, getClientIDv2, scrapeData, ScrapeIDs, urlify } from "./util"
+import { APIv2, getClientIDv2, scrapeData, SCRAPE_ID, urlify } from "./util"
 
 /**
  * Get a playlist by ID using the APIv2.
@@ -22,7 +22,7 @@ const byID = async (id: number, client_id: ClientIDv2) => {
  */
 const byURL = async (url: string) => {
   const scraped = await scrapeData(urlify(url))
-  const playlistData = scraped.find(({ id }) => id === ScrapeIDs.playlist)
+  const playlistData = scraped.find(({ id }) => id === SCRAPE_ID.playlist)
   if (!playlistData) throw new Error("No playlist data found.")
 
   const [data] = playlistData.data

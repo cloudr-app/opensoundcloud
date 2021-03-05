@@ -16,7 +16,7 @@ import {
   PaginatedResponse,
   paginateNext,
   scrapeData,
-  ScrapeIDs,
+  SCRAPE_ID,
   urlify,
 } from "./util"
 
@@ -38,7 +38,7 @@ const getByID = async (id: number, client_id: ClientIDv2) => {
  */
 const getByURL = async (url: string) => {
   const scraped = await scrapeData(urlify(url))
-  const userData = scraped.find(({ id }) => id === ScrapeIDs.user)
+  const userData = scraped.find(({ id }) => id === SCRAPE_ID.user)
   if (!userData) throw new Error("No user data found.")
 
   const [data] = userData.data

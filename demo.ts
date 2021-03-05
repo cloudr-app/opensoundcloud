@@ -49,7 +49,8 @@ const exampleSearchTerm = "noisia"
 
     // const out = await util.ensureMin(await user.tracks("space-laces", { limit: 10 }), 10)
 
-    const out = await track(exampleTrackID)
+    const out = await track.stream("https://soundcloud.com/noisia/tentacles-1")
+    // const out = await track(exampleTrackID)
     // const out = await track(exampleTrackURL)
     // const out = await search(exampleSearchTerm, { limit: 2 })
     // const out = await search.users(exampleSearchTerm)
@@ -65,13 +66,12 @@ const exampleSearchTerm = "noisia"
     // const out = await resolve(exampleUserURL)
     // const out = await resolve(exampleTrackURL)
     // const out = await resolve(examplePlaylistURL)
-    // const out = await resolve.browser(exampleUserURL, client_id)
-    // const out = await resolve.browser(exampleTrackURL, client_id)
-    // const out = await resolve.browser(examplePlaylistURL, client_id)
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    if ("collection" in out) console.log(`got ${out.collection.length} items in collection`)
+    if (typeof out === "object" && "collection" in out) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      console.log(`got ${out.collection.length} items in collection`)
+    }
 
     console.log(
       `fetched ${formatSize(byteLength(out))} of data in ${Date.now() - startTime}ms\n` +

@@ -41,3 +41,19 @@ test("get track by URL throws when not found", async t => {
 test("get track by ID throws when not found", async t => {
   await t.throwsAsync(track(0, client_id2))
 })
+
+test("get track stream using ID", async t => {
+  const data = await track.stream(exampleTrackID)
+  t.truthy(data)
+})
+
+test("get track stream using Trackv2 object", async t => {
+  const trackData = await track(exampleTrackURL)
+  const data = await track.stream(trackData)
+  t.truthy(data)
+})
+
+test("get track stream using ID and client_id", async t => {
+  const data = await track.stream(exampleTrackID, client_id2)
+  t.truthy(data)
+})

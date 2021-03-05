@@ -24,7 +24,7 @@ export const scrapeData = async (url: string): Promise<ScrapedData> => {
   return JSON.parse(match) as ScrapedData
 }
 
-export const ScrapeIDs = {
+export const SCRAPE_ID = {
   user: 73324,
   playlist: 62261,
   trackWithTranscodings: 70925,
