@@ -13,19 +13,19 @@
 ---
 
 <p align="center">
-  <a target="_blank" href="https://npmjs.org/package/opensoundcloud" alt="version">
+  <a target="_blank" href="https://npmjs.org/package/opensoundcloud">
     <img src="https://img.shields.io/npm/v/opensoundcloud.svg?style=for-the-badge">
   </a>
-  <a target="_blank" href="https://codecov.io/gh/cloudr-app/opensoundcloud" alt="downloads">
+  <a target="_blank" href="https://codecov.io/gh/cloudr-app/opensoundcloud">
     <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/cloudr-app/opensoundcloud?style=for-the-badge">
   </a>
-  <a target="_blank" href="https://npmjs.org/package/opensoundcloud" alt="downloads">
-    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/cloudr-app/opensoundcloud/CI?style=for-the-badge">
+  <a target="_blank" href="https://github.com/cloudr-app/opensoundcloud/actions/workflows/main.yml">
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/cloudr-app/opensoundcloud/CI?label=daily%20tests&style=for-the-badge">
   </a>
 </p>
 
 <p align="center">
-  <a target="_blank" href="https://wakatime.com/badge/github/cloudr-app/opensoundcloud" alt="downloads">
+  <a target="_blank" href="https://wakatime.com/badge/github/cloudr-app/opensoundcloud">
     <img src="https://wakatime.com/badge/github/cloudr-app/opensoundcloud.svg">
   </a>
   <a target="_blank" href="https://app.netlify.com/sites/opensoundcloud/deploys">
