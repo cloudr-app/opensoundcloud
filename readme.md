@@ -1,6 +1,6 @@
 <div align="center">
   <p>
-    <a target="_blank" href="https://github.com/cloudr-app/opensoundcloud">
+    <a target="_blank" href="https://opensoundcloud.cloudr.app">
       <img src="https://raw.githubusercontent.com/cloudr-app/opensoundcloud/master/assets/opensoundcloud.svg" />
     </a>
   </p>
