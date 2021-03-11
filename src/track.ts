@@ -2,7 +2,7 @@ import type { Trackv2 } from "../types/track"
 import type { ClientIDv2, URLorID } from "../types"
 
 import got from "got"
-import { APIv2, getClientIDv2, scrapeData, SCRAPE_ID, urlify } from "./util"
+import { APIv2, getClientIDv2, scrapeData, SCRAPE_FIND, urlify } from "./util"
 
 /**
  * Get a track by ID using the APIv2
@@ -22,7 +22,7 @@ const getByID = async (id: number, client_id: ClientIDv2): Promise<Trackv2> => {
  */
 const getByURL = async (url: string) => {
   const scraped = await scrapeData(urlify(url))
-  const trackData = scraped.find(({ id }) => id === SCRAPE_ID.trackWithTranscodings)
+  const trackData = scraped.find(SCRAPE_FIND.trackWithTranscodings)
   if (!trackData) throw new Error("No track data found.")
 
   const [data] = trackData.data

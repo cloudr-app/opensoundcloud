@@ -1,4 +1,4 @@
-import type { ScrapedData } from "../types/scrape"
+import type { ScrapedData, ScrapedDataPart } from "../types/scrape"
 
 import got from "got"
 
@@ -24,10 +24,11 @@ export const scrapeData = async (url: string): Promise<ScrapedData> => {
   return JSON.parse(match) as ScrapedData
 }
 
-export const SCRAPE_ID = {
-  user: 73324,
-  playlist: 62261,
-  trackWithTranscodings: 70925,
+export const SCRAPE_FIND = {
+  playlist: ({ data: [data] }: ScrapedDataPart): boolean => data.kind === "playlist",
+  user: ({ data: [data] }: ScrapedDataPart): boolean => data.kind === "user",
+  trackWithTranscodings: ({ data: [data] }: ScrapedDataPart): boolean =>
+    data.kind === "track" && data.media && data.media.transcodings,
 }
 
 const scriptReg = /<script(?: crossorigin)? src="(https:\/\/a-v2\.sndcdn\.com\/assets\/.+\.js)"/gm
